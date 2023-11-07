@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* A high z-index ensures that the navbar stays on top of other content */
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
