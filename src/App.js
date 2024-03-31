@@ -1,34 +1,35 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import Splash from './components/Splash';
-import CompanyInfo from './components/CompanyInfo';
-import WhyUs from './components/WhyUs';
-import Price from './components/Price';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import React, { Suspense, lazy } from 'react';
+const Navbar = lazy(() => import('./components/Navbar'));
+const Splash = lazy(() => import('./components/Splash'));
+const CompanyInfo = lazy(() => import('./components/CompanyInfo'));
+const WhyUs = lazy(() => import('./components/WhyUs'));
+const Price = lazy(() => import('./components/Price'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   return (
-    <div>
-      <div id="top"></div>
-      <Navbar />
-      <div id="home" class="pt-16">
-        <Splash />
-      </div>
-      <div id="company-info">
-        <CompanyInfo />
-      </div>
-      <div id="why-us">
-        <WhyUs />
-      </div>
-      <div id="price">
-        <Price />
-      </div>
-      <div id="contact">
-        <Contact />
-      </div>
-      <Footer />
-    </div>
+    <Suspense fallback={<div>Načítávam...</div>}>
+        <div id="top"></div>
+        <Navbar />
+        <div id="home" className="pt-16">
+          <Splash />
+        </div>
+        <div id="company-info">
+          <CompanyInfo />
+        </div>
+        <div id="why-us">
+          <WhyUs />
+        </div>
+        <div id="price">
+          <Price />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
+        <Footer />
+    </Suspense>
   );
 }
 

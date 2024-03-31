@@ -1,6 +1,5 @@
 import {React, useEffect} from 'react';
 import Email from '../assets/email.svg';
-import Box from '../assets/box.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

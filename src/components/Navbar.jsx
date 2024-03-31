@@ -18,7 +18,7 @@ const Navbar = () => {
                 duration={500}
                 className="flex items-center py-4 px-2 cursor-pointer"
               >
-                <img src={Logo} width={150} height={150} />
+                <img src={Logo} alt='Maradlo Logo' width={150} height={150} />
               </Link>
             </div>
           </div>
