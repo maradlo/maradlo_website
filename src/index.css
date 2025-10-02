@@ -1,17 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+  :root {
+    /* Professional color palette */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+    --primary: 220 70% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 220 10% 96%;
+    --secondary-foreground: 220 15% 25%;
+    --muted: 220 10% 95%;
+    --muted-foreground: 220 10% 40%;
+    --accent: 220 15% 92%;
+    --accent-foreground: 220 15% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 10% 88%;
+    --input: 220 10% 92%;
+    --ring: 220 70% 50%;
+    --radius: 0.5rem;
+
+    /* Custom professional colors */
+    --navy: 220 70% 10%;
+    --navy-light: 220 50% 20%;
+    --navy-lighter: 220 30% 30%;
+    --gray-50: 220 10% 98%;
+    --gray-100: 220 10% 95%;
+    --gray-200: 220 10% 88%;
+    --gray-300: 220 10% 75%;
+    --gray-400: 220 10% 60%;
+    --gray-500: 220 10% 45%;
+    --gray-600: 220 10% 35%;
+    --gray-700: 220 15% 25%;
+    --gray-800: 220 15% 15%;
+    --gray-900: 220 15% 8%;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-professional {
+    background: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--navy-light)) 100%);
+  }
+
+  .gradient-subtle {
+    background: linear-gradient(135deg, hsl(var(--gray-50)) 0%, hsl(var(--gray-100)) 100%);
+  }
+
+  .shadow-professional {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1), 0 20px 25px -5px rgb(0 0 0 / 0.04);
+  }
+
+  .shadow-elegant {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -2px rgb(0 0 0 / 0.03);
+  }
 }

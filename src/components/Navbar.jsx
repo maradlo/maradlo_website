@@ -1,130 +1,116 @@
 
-import {React, useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../assets/logo.png'
 import { Link } from 'react-scroll';
+import { Button } from './ui/button';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 20);
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const navItems = [
+      { to: "company-info", label: "O nás" },
+      { to: "why-us", label: "Služby" },
+      { to: "price", label: "Cena" },
+      { to: "contact", label: "Kontakt" }
+    ];
+
   return (
-    <nav className="bg-white shadow-lg fixed-top">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between">
-          <div className="flex space-x-7">
-            <div>
+    <nav className={`fixed-top transition-all duration-300 z-50 ${
+      isScrolled
+        ? 'bg-white/95 backdrop-blur-md shadow-elegant border-b border-gray-200/50'
+        : 'bg-white/90 backdrop-blur-sm'
+    }`}>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <div className="flex items-center">
+            <Link
+              to="top"
+              spy={true}
+              smooth={true}
+              duration={700}
+              className="flex items-center cursor-pointer group"
+            >
+              <img
+                src={Logo}
+                alt='Maradlo Logo'
+                className="h-12 w-auto transition-transform group-hover:scale-105"
+              />
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navItems.map((item) => (
               <Link
-                to="top"
+                key={item.to}
+                to={item.to}
                 spy={true}
                 smooth={true}
-                duration={500}
-                className="flex items-center py-4 px-2 cursor-pointer"
+                duration={700}
+                className="relative text-gray-700 hover:text-gray-900 font-medium tracking-wide cursor-pointer transition-colors duration-200 py-2 group"
               >
-                <img src={Logo} alt='Maradlo Logo' width={150} height={150} />
+                {item.label}
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+              </Link>
+            ))}
+            <Link to="contact" spy={true} smooth={true} duration={700}>
+              <Button
+                className="ml-4 bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-200"
+              >
+                Začať projekt
+              </Button>
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+              className="text-gray-700 hover:text-gray-900"
+            >
+              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden border-t border-gray-200/50 bg-white/95 backdrop-blur-md">
+            <div className="py-6 space-y-3 px-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  spy={true}
+                  smooth={true}
+                  duration={700}
+                  className="block px-4 py-3 text-gray-700 hover:text-gray-900 font-medium rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Link to="contact" spy={true} smooth={true} duration={700} onClick={() => setIsMobileMenuOpen(false)}>
+                <Button className="w-full mt-4 bg-primary hover:bg-primary/90 text-white font-semibold">
+                  Začať projekt
+                </Button>
               </Link>
             </div>
           </div>
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <button className="outline-none mobile-menu-button" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-              <svg
-                className="w-6 h-6 text-gray-500 hover:text-green-500"
-                x-show="!showMenu"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
-            </button>
-          </div>
-          {/* Button on the right */}
-          <div className="hidden md:flex items-center">
-
-          <Link
-            to="company-info"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="py-4 px-2 text-gray-900 font-normal hover:text-green-500 transition duration-300 cursor-pointer"
-          >
-            Kto sme a čo robíme
-          </Link>
-
-          <Link
-            to="why-us"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="py-4 px-2 text-gray-900 font-normal hover:text-green-500 transition duration-300 cursor-pointer"
-          >
-            Prečo práve my
-          </Link>
-          
-          <Link
-            to="price"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="py-4 px-2 text-gray-900 font-normal hover:text-green-500 transition duration-300 cursor-pointer"
-          >
-            Cena
-          </Link>
-
-          <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="py-4 px-2 text-gray-900 font-normal hover:text-green-500 transition duration-300 cursor-pointer"
-          >
-            Kontakt
-          </Link>
-          </div>
-        </div>
-      </div>
-      {/* Mobile menu */}
-      <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-        <Link
-            to="company-info"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="block py-2 px-4 text-sm hover:bg-gray-200"
-          >
-          Kto sme a čo robíme
-        </Link>
-
-        <Link
-            to="why-us"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="block py-2 px-4 text-sm hover:bg-gray-200"
-          >
-          Prečo práve my
-        </Link>
-
-
-        <Link
-            to="price"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="block py-2 px-4 text-sm hover:bg-gray-200"
-          >
-          Cena
-        </Link>
-        <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="block py-2 px-4 text-sm hover:bg-gray-200"
-          >
-            Kontakt
-          </Link>
+        )}
       </div>
     </nav>
   );
