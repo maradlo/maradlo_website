@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Button } from './ui/button';
 import { Link } from 'react-scroll';
-import { Check, ArrowRight, Calculator, Handshake, FileText } from 'lucide-react';
+import { Check, ArrowRight, Calculator, Handshake, FileText, CreditCard, Star } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -75,13 +75,101 @@ const Price = () => {
     }
   ];
 
+  const FloatingCard = ({ children, className = "", delay = "0s" }) => (
+    <div
+      className={`absolute bg-white/90 backdrop-blur-sm rounded-xl shadow-xl border border-white/20 ${className}`}
+      style={{
+        animation: `float 6s ease-in-out infinite`,
+        animationDelay: delay
+      }}
+    >
+      {children}
+    </div>
+  );
+
+  const PricingCalculator = () => (
+    <div className="p-4 w-72">
+      <div className="flex items-center gap-2 mb-4">
+        <Calculator className="w-5 h-5 text-blue-500" />
+        <span className="font-semibold text-gray-800">Price Calculator</span>
+      </div>
+      <div className="space-y-3">
+        <div className="flex justify-between">
+          <span className="text-sm text-gray-600">Development</span>
+          <span className="text-sm font-bold">€8,000</span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-sm text-gray-600">Design</span>
+          <span className="text-sm font-bold">€2,000</span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-sm text-gray-600">Testing</span>
+          <span className="text-sm font-bold">€1,500</span>
+        </div>
+        <div className="border-t pt-2 flex justify-between">
+          <span className="font-bold text-gray-800">Total</span>
+          <span className="font-bold text-blue-600">€11,500</span>
+        </div>
+      </div>
+    </div>
+  );
+
+  const TestimonialCard = () => (
+    <div className="p-4 w-80">
+      <div className="flex items-center gap-2 mb-3">
+        <div className="flex text-yellow-400">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="w-4 h-4 fill-current" />
+          ))}
+        </div>
+      </div>
+      <p className="text-sm text-gray-700 mb-3">
+        "Maradlo vytvorilo pre nás fantastickú aplikáciu. Profesionálny prístup a kvalita."
+      </p>
+      <div className="flex items-center gap-2">
+        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+        <div>
+          <div className="text-sm font-bold text-gray-800">Ján Novák</div>
+          <div className="text-xs text-gray-600">CEO, TechCorp</div>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="relative py-24 overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/40"></div>
+
+      {/* Geometric Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-indigo-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
+      </div>
+
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px'
+        }} />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <div className="inline-flex items-center rounded-full px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/50 text-blue-700 text-sm font-medium mb-6">
+            <CreditCard className="w-4 h-4 mr-2" />
             Cenníky služieb
+          </div>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            Transparentné
+            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              ceny na mieru
+            </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Transparentné cenové balíky prispôsobené rôznym typom projektov.
@@ -89,26 +177,27 @@ const Price = () => {
           </p>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-          {packages.map((pkg, index) => (
-            <div
-              key={index}
-              className={`relative bg-white rounded-2xl border-2 p-8 ${
-                pkg.popular
-                  ? 'border-primary shadow-professional'
-                  : 'border-gray-200 shadow-elegant hover:border-gray-300'
-              } transition-all duration-300`}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
-                    Najpopulárnejší
-                  </span>
-                </div>
-              )}
+        {/* Pricing Cards with Floating Elements */}
+        <div className="relative mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {packages.map((pkg, index) => (
+              <div
+                key={index}
+                className={`relative bg-white/80 backdrop-blur-sm rounded-2xl border-2 p-8 ${
+                  pkg.popular
+                    ? 'border-primary shadow-xl scale-105'
+                    : 'border-white/20 shadow-lg hover:shadow-xl'
+                } transition-all duration-300`}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                {pkg.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Najpopulárnejší
+                    </span>
+                  </div>
+                )}
 
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
@@ -142,13 +231,23 @@ const Price = () => {
               </Link>
             </div>
           ))}
+          </div>
+
+          {/* Floating Elements */}
+          <FloatingCard className="top-40 -right-80 hidden xl:block" delay="1s">
+            <PricingCalculator />
+          </FloatingCard>
+
+          <FloatingCard className="bottom-40 -left-80 hidden xl:block" delay="4s">
+            <TestimonialCard />
+          </FloatingCard>
         </div>
 
         {/* Process */}
-        <div className="bg-gray-50 rounded-3xl p-12 mb-16">
+        <div className="bg-gradient-to-br from-white/90 to-blue-50/90 backdrop-blur-sm rounded-3xl p-12 border border-white/20 shadow-xl mb-16">
           <div className="text-center mb-12">
             <h3 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Ako postupujeme
+              Ako <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">postupujeme</span>
             </h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Náš proces je navrhnutý tak, aby ste mali plnú kontrolu nad rozpočtom a harmonogramom.
@@ -157,12 +256,18 @@ const Price = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {process.map((step, index) => (
-              <div key={index} className="text-center" data-aos="fade-up" data-aos-delay={index * 150}>
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6">
-                  <step.icon className="w-8 h-8 text-primary" />
+              <div key={index} className="relative text-center group" data-aos="fade-up" data-aos-delay={index * 150}>
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform">
+                    <step.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h4>
+                  <p className="text-gray-600 leading-relaxed">{step.description}</p>
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h4>
-                <p className="text-gray-600 leading-relaxed">{step.description}</p>
+
+                {index < 2 && (
+                  <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-gray-300 to-gray-200 z-10 transform -translate-y-1/2"></div>
+                )}
               </div>
             ))}
           </div>
@@ -210,6 +315,13 @@ const Price = () => {
           </Link>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+      `}</style>
     </section>
   );
 };
