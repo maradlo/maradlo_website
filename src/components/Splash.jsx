@@ -1,14 +1,20 @@
-
-import React from 'react';
-import { Button } from './ui/button';
-import { Link } from 'react-scroll';
-import { ArrowRight, CheckCircle, Code2, Database, Globe, Smartphone } from 'lucide-react';
+import React from "react";
+import { Button } from "./ui/button";
+import { Link } from "react-scroll";
+import {
+  ArrowRight,
+  CheckCircle,
+  Code2,
+  Database,
+  Globe,
+  Smartphone,
+} from "lucide-react";
 
 const Splash = () => {
   const keyPoints = [
     "Profesionálne webové aplikácie",
     "Mobilné riešenia na mieru",
-    "Technická podpora a údržba"
+    "Technická podpora a údržba",
   ];
 
   const FloatingCard = ({ children, className = "", delay = "0s" }) => (
@@ -16,7 +22,7 @@ const Splash = () => {
       className={`absolute bg-white/90 backdrop-blur-sm rounded-xl shadow-xl border border-white/20 ${className}`}
       style={{
         animation: `float 6s ease-in-out infinite`,
-        animationDelay: delay
+        animationDelay: delay,
       }}
     >
       {children}
@@ -32,9 +38,22 @@ const Splash = () => {
         <span className="text-gray-600 ml-2 font-sans text-xs">app.js</span>
       </div>
       <div className="space-y-1 text-gray-800">
-        <div><span className="text-blue-600">const</span> <span className="text-purple-600">app</span> = <span className="text-green-600">express</span>();</div>
-        <div><span className="text-blue-600">app</span>.<span className="text-yellow-600">get</span>(<span className="text-green-600">'/api'</span>, <span className="text-purple-600">handler</span>);</div>
-        <div><span className="text-blue-600">app</span>.<span className="text-yellow-600">listen</span>(<span className="text-orange-600">3000</span>);</div>
+        <div>
+          <span className="text-blue-600">const</span>{" "}
+          <span className="text-purple-600">app</span> ={" "}
+          <span className="text-green-600">express</span>();
+        </div>
+        <div>
+          <span className="text-blue-600">app</span>.
+          <span className="text-yellow-600">get</span>(
+          <span className="text-green-600">'/api'</span>,{" "}
+          <span className="text-purple-600">handler</span>);
+        </div>
+        <div>
+          <span className="text-blue-600">app</span>.
+          <span className="text-yellow-600">listen</span>(
+          <span className="text-orange-600">3000</span>);
+        </div>
       </div>
     </div>
   );
@@ -108,13 +127,16 @@ const Splash = () => {
 
       {/* Grid Pattern */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
             linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px'
-        }} />
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
 
       <div className="relative w-full z-10">
@@ -128,24 +150,31 @@ const Splash = () => {
                   Moderné softvérové riešenia
                 </div>
 
-                <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] text-balance">
+                <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.3] text-balance mb-8">
                   Transformujeme
-                  <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent leading-[1.3]">
                     digitálne nápady
                   </span>
                   na skutočnosť
                 </h1>
 
-                <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl">
-                  Vytvárame <strong className="text-gray-900">výkonné webové aplikácie</strong> a
-                  mobilné riešenia, ktoré poháňajú moderné podnikanie a prinášajú skutočnú hodnotu.
+                <p className="text-xl md:text-2xl text-gray-600 leading-[1.3] max-w-2xl">
+                  Vytvárame{" "}
+                  <strong className="text-gray-900">
+                    výkonné webové aplikácie
+                  </strong>{" "}
+                  a mobilné riešenia, ktoré poháňajú moderné podnikanie a
+                  prinášajú skutočnú hodnotu.
                 </p>
               </div>
 
               {/* Key Points */}
               <div className="grid grid-cols-1 gap-3">
                 {keyPoints.map((point, index) => (
-                  <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-white/50 backdrop-blur-sm">
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 p-3 rounded-lg bg-white/50 backdrop-blur-sm"
+                  >
                     <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center">
                       <CheckCircle className="w-4 h-4 text-white" />
                     </div>
@@ -217,7 +246,9 @@ const Splash = () => {
                     <Code2 className="w-4 h-4 text-blue-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-800 text-sm">React</div>
+                    <div className="font-semibold text-gray-800 text-sm">
+                      React
+                    </div>
                     <div className="text-xs text-gray-600">Frontend</div>
                   </div>
                 </div>
@@ -229,7 +260,9 @@ const Splash = () => {
                     <Database className="w-4 h-4 text-green-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-800 text-sm">Node.js</div>
+                    <div className="font-semibold text-gray-800 text-sm">
+                      Node.js
+                    </div>
                     <div className="text-xs text-gray-600">Backend</div>
                   </div>
                 </div>
@@ -241,7 +274,9 @@ const Splash = () => {
                     <Smartphone className="w-4 h-4 text-purple-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-800 text-sm">Mobile</div>
+                    <div className="font-semibold text-gray-800 text-sm">
+                      Mobile
+                    </div>
                     <div className="text-xs text-gray-600">Apps</div>
                   </div>
                 </div>
@@ -253,8 +288,13 @@ const Splash = () => {
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
         }
       `}</style>
     </section>

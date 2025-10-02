@@ -1,13 +1,22 @@
-import React, { useEffect } from 'react';
-import { Button } from './ui/button';
-import { Phone, Mail, MapPin, Clock, ArrowRight, MessageCircle, Calendar, Zap } from 'lucide-react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useEffect } from "react";
+import { Button } from "./ui/button";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ArrowRight,
+  MessageCircle,
+  Calendar,
+  Zap,
+} from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000
+      duration: 1000,
     });
   }, []);
 
@@ -17,29 +26,29 @@ const Contact = () => {
       title: "Telefón",
       value: "+421 917 722 223",
       href: "tel:+421917722223",
-      description: "Pondelok - Piatok, 9:00 - 17:00"
+      description: "Pondelok - Piatok, 9:00 - 17:00",
     },
     {
       icon: Mail,
       title: "Email",
       value: "marek.zacik@maradlo.sk",
       href: "mailto:marek.zacik@maradlo.sk",
-      description: "Odpovieme do 24 hodín"
+      description: "Odpovieme do 24 hodín",
     },
     {
       icon: MapPin,
       title: "Adresa",
       value: "Bratislava, Slovensko",
       href: "#",
-      description: "Stretnutie po dohode"
+      description: "Stretnutie po dohode",
     },
     {
       icon: Clock,
       title: "Pracovný čas",
       value: "Po - Pi: 9:00 - 17:00",
       href: "#",
-      description: "Urgentné veci aj mimo pracovného času"
-    }
+      description: "Urgentné veci aj mimo pracovného času",
+    },
   ];
 
   const FloatingCard = ({ children, className = "", delay = "0s" }) => (
@@ -47,7 +56,7 @@ const Contact = () => {
       className={`absolute bg-white/90 backdrop-blur-sm rounded-xl shadow-xl border border-white/20 ${className}`}
       style={{
         animation: `float 6s ease-in-out infinite`,
-        animationDelay: delay
+        animationDelay: delay,
       }}
     >
       {children}
@@ -83,18 +92,28 @@ const Contact = () => {
         <span className="font-semibold text-gray-800">Project Timeline</span>
       </div>
       <div className="space-y-2">
-        {['Consultation', 'Planning', 'Development', 'Launch'].map((phase, index) => (
-          <div key={index} className="flex items-center gap-3">
-            <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-              index < 2 ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-600'
-            }`}>
-              {index + 1}
+        {["Consultation", "Planning", "Development", "Launch"].map(
+          (phase, index) => (
+            <div key={index} className="flex items-center gap-3">
+              <div
+                className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                  index < 2
+                    ? "bg-green-500 text-white"
+                    : "bg-gray-200 text-gray-600"
+                }`}
+              >
+                {index + 1}
+              </div>
+              <span
+                className={`text-sm ${
+                  index < 2 ? "text-gray-900 font-medium" : "text-gray-500"
+                }`}
+              >
+                {phase}
+              </span>
             </div>
-            <span className={`text-sm ${
-              index < 2 ? 'text-gray-900 font-medium' : 'text-gray-500'
-            }`}>{phase}</span>
-          </div>
-        ))}
+          )
+        )}
       </div>
     </div>
   );
@@ -112,13 +131,16 @@ const Contact = () => {
 
       {/* Grid Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
             linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px'
-        }} />
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
@@ -127,15 +149,15 @@ const Contact = () => {
             <MessageCircle className="w-4 h-4 mr-2" />
             Spojte sa s nami
           </div>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.3]">
             Začnime
-            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent leading-[1.3]">
               spoluprácu
             </span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Máte nápad na projekt? Potrebujete konzultáciu? Neváhajte sa na nás obrátiť.
-            Prvá konzultácia je zadarmo.
+          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-[1.3]">
+            Máte nápad na projekt? Potrebujete konzultáciu? Neváhajte sa na nás
+            obrátiť. Prvá konzultácia je zadarmo.
           </p>
         </div>
 
@@ -147,7 +169,8 @@ const Contact = () => {
                 Spojte sa s nami
               </h3>
               <p className="text-lg text-gray-600 mb-8">
-                Sme tu, aby sme vám pomohli transformovať vaše nápady na úspešné digitálne riešenia.
+                Sme tu, aby sme vám pomohli transformovať vaše nápady na úspešné
+                digitálne riešenia.
               </p>
             </div>
 
@@ -164,19 +187,25 @@ const Contact = () => {
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                       <contact.icon className="w-6 h-6 text-white" />
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-gray-900 mb-1">{contact.title}</h4>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        {contact.title}
+                      </h4>
                       {contact.href !== "#" ? (
                         <a
                           href={contact.href}
-                          className="text-lg font-medium text-primary hover:text-primary/80 transition-colors block mb-1"
+                          className="text-lg font-medium text-primary hover:text-primary/80 transition-colors block mb-1 break-all"
                         >
                           {contact.value}
                         </a>
                       ) : (
-                        <div className="text-lg font-medium text-gray-900 mb-1">{contact.value}</div>
+                        <div className="text-lg font-medium text-gray-900 mb-1 break-words">
+                          {contact.value}
+                        </div>
                       )}
-                      <p className="text-sm text-gray-600">{contact.description}</p>
+                      <p className="text-sm text-gray-600">
+                        {contact.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -189,22 +218,40 @@ const Contact = () => {
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
                   <Zap className="w-4 h-4 text-white" />
                 </div>
-                <h4 className="text-xl font-bold text-gray-900">Rýchly kontakt</h4>
+                <h4 className="text-xl font-bold text-gray-900">
+                  Rýchly kontakt
+                </h4>
               </div>
               <p className="text-gray-600 mb-6">
-                Potrebujete rýchlu odpoveď na vašu otázku? Využite jeden z nasledujúcich spôsobov:
+                Potrebujete rýchlu odpoveď na vašu otázku? Využite jeden z
+                nasledujúcich spôsobov:
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-                  <a href="tel:+421917722223">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Zavolať teraz
+                <Button
+                  asChild
+                  size="lg"
+                  className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-6 py-4 text-base"
+                >
+                  <a
+                    href="tel:+421917722223"
+                    className="flex items-center justify-center gap-3"
+                  >
+                    <Phone className="w-5 h-5" />
+                    <span>Zavolať teraz</span>
                   </a>
                 </Button>
-                <Button asChild variant="outline" className="flex-1 border-2 border-gray-300 hover:border-gray-400 bg-white/80 backdrop-blur-sm">
-                  <a href="mailto:marek.zacik@maradlo.sk">
-                    <Mail className="w-4 h-4 mr-2" />
-                    Napísať email
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="flex-1 border-2 border-gray-300 hover:border-gray-400 bg-white/80 backdrop-blur-sm px-6 py-4 text-base"
+                >
+                  <a
+                    href="mailto:marek.zacik@maradlo.sk"
+                    className="flex items-center justify-center gap-3"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span>Napísať email</span>
                   </a>
                 </Button>
               </div>
@@ -215,21 +262,28 @@ const Contact = () => {
           <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 rounded-3xl p-12 text-white relative overflow-hidden">
             <div className="relative z-10">
               <h3 className="font-display text-3xl md:text-4xl font-bold mb-6">
-                Začnime <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">spoluprácu</span>
+                Začnime{" "}
+                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                  spoluprácu
+                </span>
               </h3>
               <p className="text-xl mb-8 text-white/90">
-                Popíšte nám váš projekt a my vám do 24 hodín pošleme detailnú ponuku
-                s cenovou kalkuláciou a harmonogramom.
+                Popíšte nám váš projekt a my vám do 24 hodín pošleme detailnú
+                ponuku s cenovou kalkuláciou a harmonogramom.
               </p>
 
               <div className="space-y-6 mb-8">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-white rounded-full"></div>
-                  <span className="text-white/90">Bezplatná konzultácia a analýza</span>
+                  <span className="text-white/90">
+                    Bezplatná konzultácia a analýza
+                  </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-white rounded-full"></div>
-                  <span className="text-white/90">Transparentná cenová ponuka</span>
+                  <span className="text-white/90">
+                    Transparentná cenová ponuka
+                  </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-white rounded-full"></div>
@@ -242,9 +296,12 @@ const Contact = () => {
                 className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-semibold px-8 py-4 group shadow-lg"
                 asChild
               >
-                <a href="mailto:marek.zacik@maradlo.sk">
-                  Začať projekt
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <a
+                  href="mailto:marek.zacik@maradlo.sk"
+                  className="flex items-center justify-center gap-3"
+                >
+                  <span>Začať projekt</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
             </div>
@@ -260,7 +317,10 @@ const Contact = () => {
             <ContactStatus />
           </FloatingCard>
 
-          <FloatingCard className="bottom-40 -left-80 hidden xl:block" delay="3s">
+          <FloatingCard
+            className="bottom-40 -left-80 hidden xl:block"
+            delay="3s"
+          >
             <ProjectPlanner />
           </FloatingCard>
         </div>
@@ -268,8 +328,13 @@ const Contact = () => {
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
         }
       `}</style>
     </section>

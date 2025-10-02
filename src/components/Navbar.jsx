@@ -1,35 +1,36 @@
-
-import React, { useState, useEffect } from 'react';
-import Logo from '../assets/logo.png'
-import { Link } from 'react-scroll';
-import { Button } from './ui/button';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import Logo from "../assets/logo-no-bg.png";
+import { Link } from "react-scroll";
+import { Button } from "./ui/button";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-    useEffect(() => {
-      const handleScroll = () => {
-        setIsScrolled(window.scrollY > 20);
-      };
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    const navItems = [
-      { to: "company-info", label: "O nás" },
-      { to: "why-us", label: "Služby" },
-      { to: "price", label: "Cena" },
-      { to: "contact", label: "Kontakt" }
-    ];
+  const navItems = [
+    { to: "company-info", label: "O nás" },
+    { to: "why-us", label: "Služby" },
+    { to: "price", label: "Cena" },
+    { to: "contact", label: "Kontakt" },
+  ];
 
   return (
-    <nav className={`fixed-top transition-all duration-300 z-50 ${
-      isScrolled
-        ? 'bg-white/95 backdrop-blur-md shadow-elegant border-b border-gray-200/50'
-        : 'bg-white/90 backdrop-blur-sm'
-    }`}>
+    <nav
+      className={`fixed-top transition-all duration-300 z-50 ${
+        isScrolled
+          ? "bg-white/95 backdrop-blur-md shadow-elegant border-b border-gray-200/50"
+          : "bg-white/90 backdrop-blur-sm"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
@@ -42,8 +43,8 @@ const Navbar = () => {
             >
               <img
                 src={Logo}
-                alt='Maradlo Logo'
-                className="h-12 w-auto transition-transform group-hover:scale-105"
+                alt="Maradlo Logo"
+                className="h-28 w-auto transition-transform group-hover:scale-105"
               />
             </Link>
           </div>
@@ -64,9 +65,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Link to="contact" spy={true} smooth={true} duration={700}>
-              <Button
-                className="ml-4 bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-200"
-              >
+              <Button className="ml-4 bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-200">
                 Začať projekt
               </Button>
             </Link>
@@ -81,7 +80,11 @@ const Navbar = () => {
               aria-label="Toggle menu"
               className="text-gray-700 hover:text-gray-900"
             >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
@@ -103,7 +106,13 @@ const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
-              <Link to="contact" spy={true} smooth={true} duration={700} onClick={() => setIsMobileMenuOpen(false)}>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={700}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 <Button className="w-full mt-4 bg-primary hover:bg-primary/90 text-white font-semibold">
                   Začať projekt
                 </Button>

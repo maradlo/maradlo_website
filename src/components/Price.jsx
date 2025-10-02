@@ -1,14 +1,22 @@
-import React, { useEffect } from 'react';
-import { Button } from './ui/button';
-import { Link } from 'react-scroll';
-import { Check, ArrowRight, Calculator, Handshake, FileText, CreditCard, Star } from 'lucide-react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useEffect } from "react";
+import { Button } from "./ui/button";
+import { Link } from "react-scroll";
+import {
+  Check,
+  ArrowRight,
+  Calculator,
+  Handshake,
+  FileText,
+  CreditCard,
+  Star,
+} from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Price = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000
+      duration: 1000,
     });
   }, []);
 
@@ -21,10 +29,10 @@ const Price = () => {
         "Responzívny dizajn",
         "Základná SEO optimalizácia",
         "Kontaktný formulár",
-        "30 dní bezplatnej podpory"
+        "30 dní bezplatnej podpory",
       ],
       priceRange: "2 000 - 5 000",
-      timeframe: "2-4 týždne"
+      timeframe: "2-4 týždne",
     },
     {
       name: "Profesionálny balík",
@@ -35,11 +43,11 @@ const Price = () => {
         "Databázové riešenia",
         "API integrácie",
         "90 dní bezplatnej podpory",
-        "Školenie používateľov"
+        "Školenie používateľov",
       ],
       priceRange: "5 000 - 15 000",
       timeframe: "4-8 týždňov",
-      popular: true
+      popular: true,
     },
     {
       name: "Enterprise balík",
@@ -50,29 +58,29 @@ const Price = () => {
         "Vlastné API a integrácie",
         "Cloud infraštruktúra",
         "6 mesiacov bezplatnej podpory",
-        "Dedikovaný project manager"
+        "Dedikovaný project manager",
       ],
       priceRange: "15 000+",
-      timeframe: "8-16 týždňov"
-    }
+      timeframe: "8-16 týždňov",
+    },
   ];
 
   const process = [
     {
       icon: Calculator,
       title: "Bezplatná konzultácia",
-      description: "Analyzujeme vaše potreby a navrhneme optimálne riešenie"
+      description: "Analyzujeme vaše potreby a navrhneme optimálne riešenie",
     },
     {
       icon: FileText,
       title: "Detailná ponuka",
-      description: "Pripravíme transparentnú cenovú ponuku s presným rozpočtom"
+      description: "Pripravíme transparentnú cenovú ponuku s presným rozpočtom",
     },
     {
       icon: Handshake,
       title: "Začiatok spolupráce",
-      description: "Po odsúhlasení ponuky začneme s realizáciou projektu"
-    }
+      description: "Po odsúhlasení ponuky začneme s realizáciou projektu",
+    },
   ];
 
   const FloatingCard = ({ children, className = "", delay = "0s" }) => (
@@ -80,7 +88,7 @@ const Price = () => {
       className={`absolute bg-white/90 backdrop-blur-sm rounded-xl shadow-xl border border-white/20 ${className}`}
       style={{
         animation: `float 6s ease-in-out infinite`,
-        animationDelay: delay
+        animationDelay: delay,
       }}
     >
       {children}
@@ -124,7 +132,8 @@ const Price = () => {
         </div>
       </div>
       <p className="text-sm text-gray-700 mb-3">
-        "Maradlo vytvorilo pre nás fantastickú aplikáciu. Profesionálny prístup a kvalita."
+        "Maradlo vytvorilo pre nás fantastickú aplikáciu. Profesionálny prístup
+        a kvalita."
       </p>
       <div className="flex items-center gap-2">
         <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
@@ -149,13 +158,16 @@ const Price = () => {
 
       {/* Grid Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
             linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px'
-        }} />
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -165,15 +177,16 @@ const Price = () => {
             <CreditCard className="w-4 h-4 mr-2" />
             Cenníky služieb
           </div>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.3]">
             Transparentné
-            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent leading-[1.3]">
               ceny na mieru
             </span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-[1.3]">
             Transparentné cenové balíky prispôsobené rôznym typom projektov.
-            Všetky ceny sú orientačné a finálna cena závisí od konkrétnych požiadaviek.
+            Všetky ceny sú orientačné a finálna cena závisí od konkrétnych
+            požiadaviek.
           </p>
         </div>
 
@@ -185,8 +198,8 @@ const Price = () => {
                 key={index}
                 className={`relative bg-white/80 backdrop-blur-sm rounded-2xl border-2 p-8 ${
                   pkg.popular
-                    ? 'border-primary shadow-xl scale-105'
-                    : 'border-white/20 shadow-lg hover:shadow-xl'
+                    ? "border-primary shadow-xl scale-105"
+                    : "border-white/20 shadow-lg hover:shadow-xl"
                 } transition-all duration-300`}
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
@@ -199,38 +212,44 @@ const Price = () => {
                   </div>
                 )}
 
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                <p className="text-gray-600 mb-6">{pkg.description}</p>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-900">{pkg.priceRange}</span>
-                  <span className="text-gray-600 ml-2">€</span>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {pkg.name}
+                  </h3>
+                  <p className="text-gray-600 mb-6">{pkg.description}</p>
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-gray-900">
+                      {pkg.priceRange}
+                    </span>
+                    <span className="text-gray-600 ml-2">€</span>
+                  </div>
+                  <div className="text-sm text-gray-500">
+                    Doba realizácie: {pkg.timeframe}
+                  </div>
                 </div>
-                <div className="text-sm text-gray-500">Doba realizácie: {pkg.timeframe}</div>
+
+                <ul className="space-y-4 mb-8">
+                  {pkg.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link to="contact" spy={true} smooth={true} duration={700}>
+                  <Button
+                    className={`w-full ${
+                      pkg.popular
+                        ? "bg-primary hover:bg-primary/90 text-white"
+                        : "bg-gray-100 hover:bg-gray-200 text-gray-900"
+                    } font-semibold py-3`}
+                  >
+                    Získať ponuku
+                  </Button>
+                </Link>
               </div>
-
-              <ul className="space-y-4 mb-8">
-                {pkg.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Link to="contact" spy={true} smooth={true} duration={700}>
-                <Button
-                  className={`w-full ${
-                    pkg.popular
-                      ? 'bg-primary hover:bg-primary/90 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  } font-semibold py-3`}
-                >
-                  Získať ponuku
-                </Button>
-              </Link>
-            </div>
-          ))}
+            ))}
           </div>
 
           {/* Floating Elements */}
@@ -238,7 +257,10 @@ const Price = () => {
             <PricingCalculator />
           </FloatingCard>
 
-          <FloatingCard className="bottom-40 -left-80 hidden xl:block" delay="4s">
+          <FloatingCard
+            className="bottom-40 -left-80 hidden xl:block"
+            delay="4s"
+          >
             <TestimonialCard />
           </FloatingCard>
         </div>
@@ -247,27 +269,36 @@ const Price = () => {
         <div className="bg-gradient-to-br from-white/90 to-blue-50/90 backdrop-blur-sm rounded-3xl p-12 border border-white/20 shadow-xl mb-16">
           <div className="text-center mb-12">
             <h3 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Ako <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">postupujeme</span>
+              Ako{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                postupujeme
+              </span>
             </h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Náš proces je navrhnutý tak, aby ste mali plnú kontrolu nad rozpočtom a harmonogramom.
+              Náš proces je navrhnutý tak, aby ste mali plnú kontrolu nad
+              rozpočtom a harmonogramom.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {process.map((step, index) => (
-              <div key={index} className="relative text-center group" data-aos="fade-up" data-aos-delay={index * 150}>
+              <div
+                key={index}
+                className="relative text-center group"
+                data-aos="fade-up"
+                data-aos-delay={index * 150}
+              >
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform">
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h4>
-                  <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-3">
+                    {step.title}
+                  </h4>
+                  <p className="text-gray-600 leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
-
-                {index < 2 && (
-                  <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-gray-300 to-gray-200 z-10 transform -translate-y-1/2"></div>
-                )}
               </div>
             ))}
           </div>
@@ -288,7 +319,7 @@ const Price = () => {
                 "SEO optimalizácia",
                 "Bezpečnostné opatrenia",
                 "Dokumentácia projektu",
-                "Základná podpora po spustení"
+                "Základná podpora po spustení",
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <Check className="w-5 h-5 text-primary flex-shrink-0" />
@@ -305,10 +336,14 @@ const Price = () => {
             Potrebujete individuálnu ponuku?
           </h3>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Každý projekt je jedinečný. Kontaktujte nás pre bezplatnú konzultáciu a personalizovanú ponuku.
+            Každý projekt je jedinečný. Kontaktujte nás pre bezplatnú
+            konzultáciu a personalizovanú ponuku.
           </p>
           <Link to="contact" spy={true} smooth={true} duration={700}>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 text-lg group">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 text-lg group"
+            >
               Bezplatná konzultácia
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -318,8 +353,13 @@ const Price = () => {
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
         }
       `}</style>
     </section>

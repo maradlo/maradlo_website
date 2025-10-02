@@ -1,6 +1,15 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Globe, Smartphone, Code, ExternalLink, ArrowUp } from 'lucide-react';
-import Logo from '../assets/logo.png';
+import React from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Smartphone,
+  Code,
+  ExternalLink,
+  ArrowUp,
+} from "lucide-react";
+import Logo from "../assets/logo-no-bg.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,13 +17,13 @@ const Footer = () => {
   const services = [
     { name: "Webové aplikácie", icon: Globe },
     { name: "Mobilné aplikácie", icon: Smartphone },
-    { name: "API integrácie", icon: Code }
+    { name: "API integrácie", icon: Code },
   ];
 
   const companyInfo = [
     "Profesionálne softvérové riešenia",
     "5+ rokov skúseností",
-    "50+ úspešných projektov"
+    "50+ úspešných projektov",
   ];
 
   return (
@@ -37,18 +46,25 @@ const Footer = () => {
                 <div className="w-px h-8 bg-gradient-to-b from-blue-500 to-transparent"></div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-green-400 text-sm font-medium">Online</span>
+                  <span className="text-green-400 text-sm font-medium">
+                    Online
+                  </span>
                 </div>
               </div>
               <div className="max-w-md">
-                <h3 className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-4">Maradlo s.r.o.</h3>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-4">
+                  Maradlo s.r.o.
+                </h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Špecializujeme sa na vývoj profesionálnych softvérových riešení.
-                  Transformujeme nápady na úspešné digitálne produkty.
+                  Špecializujeme sa na vývoj profesionálnych softvérových
+                  riešení. Transformujeme nápady na úspešné digitálne produkty.
                 </p>
                 <div className="space-y-2">
                   {companyInfo.map((info, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-400">
+                    <div
+                      key={index}
+                      className="flex items-center gap-2 text-gray-400"
+                    >
                       <div className="w-1.5 h-1.5 bg-gray-500 rounded-full"></div>
                       <span className="text-sm">{info}</span>
                     </div>
@@ -59,14 +75,21 @@ const Footer = () => {
 
             {/* Services */}
             <div className="space-y-6">
-              <h4 className="text-lg font-semibold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Naše služby</h4>
+              <h4 className="text-lg font-semibold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                Naše služby
+              </h4>
               <div className="space-y-4">
                 {services.map((service, index) => (
-                  <div key={index} className="group flex items-center gap-3 text-gray-300 hover:text-white transition-all duration-200">
+                  <div
+                    key={index}
+                    className="group flex items-center gap-3 text-gray-300 hover:text-white transition-all duration-200"
+                  >
                     <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-500/20 to-indigo-500/20 flex items-center justify-center group-hover:from-blue-500/30 group-hover:to-indigo-500/30 transition-all">
                       <service.icon className="w-4 h-4" />
                     </div>
-                    <span className="text-sm group-hover:translate-x-1 transition-transform">{service.name}</span>
+                    <span className="text-sm group-hover:translate-x-1 transition-transform">
+                      {service.name}
+                    </span>
                   </div>
                 ))}
                 <div className="pt-2">
@@ -83,7 +106,9 @@ const Footer = () => {
 
             {/* Contact */}
             <div className="space-y-6">
-              <h4 className="text-lg font-semibold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Kontakt</h4>
+              <h4 className="text-lg font-semibold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                Kontakt
+              </h4>
               <div className="space-y-4">
                 <a
                   href="mailto:marek.zacik@maradlo.sk"
@@ -92,7 +117,9 @@ const Footer = () => {
                   <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-500/20 to-indigo-500/20 flex items-center justify-center group-hover:from-blue-500/30 group-hover:to-indigo-500/30 transition-all">
                     <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   </div>
-                  <span className="text-sm group-hover:translate-x-1 transition-transform">marek.zacik@maradlo.sk</span>
+                  <span className="text-sm group-hover:translate-x-1 transition-transform">
+                    marek.zacik@maradlo.sk
+                  </span>
                 </a>
                 <a
                   href="tel:+421917722223"
@@ -101,7 +128,9 @@ const Footer = () => {
                   <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-emerald-500/30 transition-all">
                     <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   </div>
-                  <span className="text-sm group-hover:translate-x-1 transition-transform">+421 917 722 223</span>
+                  <span className="text-sm group-hover:translate-x-1 transition-transform">
+                    +421 917 722 223
+                  </span>
                 </a>
                 <div className="flex items-center gap-3 text-gray-300">
                   <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/20 to-violet-500/20 flex items-center justify-center">
@@ -130,7 +159,7 @@ const Footer = () => {
                 © {currentYear} Maradlo s.r.o. Všetky práva vyhradené.
               </div>
               <button
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className="group flex items-center gap-2 text-xs text-gray-500 hover:text-blue-400 transition-colors"
               >
                 <ArrowUp className="w-3 h-3 group-hover:-translate-y-0.5 transition-transform" />

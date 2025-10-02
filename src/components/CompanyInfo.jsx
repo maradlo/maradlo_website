@@ -289,9 +289,6 @@ const CompanyInfo = () => {
                   <p className="text-gray-600 leading-relaxed">{phase.desc}</p>
                 </div>
 
-                {index < 2 && (
-                  <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-gray-300 to-gray-200 z-10 transform -translate-y-1/2"></div>
-                )}
               </div>
             ))}
           </div>

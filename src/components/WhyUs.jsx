@@ -1,14 +1,25 @@
-import React, { useEffect } from 'react';
-import { Globe, Smartphone, Code, Database, Cloud, Zap, ArrowRight, Code2, Layers, Cpu } from 'lucide-react';
-import { Button } from './ui/button';
-import { Link } from 'react-scroll';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useEffect } from "react";
+import {
+  Globe,
+  Smartphone,
+  Code,
+  Database,
+  Cloud,
+  Zap,
+  ArrowRight,
+  Code2,
+  Layers,
+  Cpu,
+} from "lucide-react";
+import { Button } from "./ui/button";
+import { Link } from "react-scroll";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WhyUs = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000
+      duration: 1000,
     });
   }, []);
 
@@ -17,7 +28,7 @@ const WhyUs = () => {
       className={`absolute bg-white/90 backdrop-blur-sm rounded-xl shadow-xl border border-white/20 ${className}`}
       style={{
         animation: `float 6s ease-in-out infinite`,
-        animationDelay: delay
+        animationDelay: delay,
       }}
     >
       {children}
@@ -28,45 +39,50 @@ const WhyUs = () => {
     {
       icon: Globe,
       title: "Webové aplikácie",
-      description: "Moderné, responzívne webové aplikácie postavené na najnovších technológiách.",
+      description:
+        "Moderné, responzívne webové aplikácie postavené na najnovších technológiách.",
       technologies: ["React", "Next.js", "Vue.js", "Angular"],
-      gradient: "from-blue-500 to-indigo-600"
+      gradient: "from-blue-500 to-indigo-600",
     },
     {
       icon: Smartphone,
       title: "Mobilné aplikácie",
-      description: "Natívne a cross-platform mobilné aplikácie pre iOS a Android platformy.",
+      description:
+        "Natívne a cross-platform mobilné aplikácie pre iOS a Android platformy.",
       technologies: ["React Native", "Flutter", "Swift", "Kotlin"],
-      gradient: "from-green-500 to-emerald-600"
+      gradient: "from-green-500 to-emerald-600",
     },
     {
       icon: Database,
       title: "Backend systémy",
-      description: "Škálovateľné backend riešenia s dôrazom na výkon a bezpečnosť.",
+      description:
+        "Škálovateľné backend riešenia s dôrazom na výkon a bezpečnosť.",
       technologies: ["Node.js", "Python", "PostgreSQL", "MongoDB"],
-      gradient: "from-purple-500 to-violet-600"
+      gradient: "from-purple-500 to-violet-600",
     },
     {
       icon: Cloud,
       title: "Cloud riešenia",
-      description: "Nasadenie a správa aplikácií v cloudových infraštruktúrach.",
+      description:
+        "Nasadenie a správa aplikácií v cloudových infraštruktúrach.",
       technologies: ["AWS", "Azure", "Google Cloud", "Docker"],
-      gradient: "from-orange-500 to-red-600"
+      gradient: "from-orange-500 to-red-600",
     },
     {
       icon: Code,
       title: "API integrácie",
-      description: "Integrácia s externými službami a vytvorenie vlastných API riešení.",
+      description:
+        "Integrácia s externými službami a vytvorenie vlastných API riešení.",
       technologies: ["REST", "GraphQL", "Webhooks", "Microservices"],
-      gradient: "from-pink-500 to-purple-600"
+      gradient: "from-pink-500 to-purple-600",
     },
     {
       icon: Zap,
       title: "Automatizácia",
       description: "Automatizácia business procesov a workflow optimalizácia.",
       technologies: ["CI/CD", "Automation", "Testing", "Monitoring"],
-      gradient: "from-yellow-500 to-orange-600"
-    }
+      gradient: "from-yellow-500 to-orange-600",
+    },
   ];
 
   const APIExample = () => (
@@ -130,15 +146,15 @@ const WhyUs = () => {
             <Layers className="w-4 h-4 mr-2" />
             Naše služby
           </div>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.3]">
             Komplexné
-            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent leading-[1.3]">
               digitálne riešenia
             </span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Ponúkame komplexné softvérové riešenia od návrhu až po implementáciu a údržbu.
-            Využívame moderné technológie a osvedčené postupy.
+          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-[1.3]">
+            Ponúkame komplexné softvérové riešenia od návrhu až po implementáciu
+            a údržbu. Využívame moderné technológie a osvedčené postupy.
           </p>
         </div>
 
@@ -153,17 +169,25 @@ const WhyUs = () => {
                 data-aos-delay={index * 100}
               >
                 {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
+                ></div>
 
                 <div className="relative">
                   {/* Icon */}
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r ${service.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r ${service.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    {service.description}
+                  </p>
 
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2">
@@ -195,30 +219,61 @@ const WhyUs = () => {
         <div className="bg-gradient-to-br from-white/90 to-blue-50/90 backdrop-blur-sm rounded-3xl p-12 border border-white/20 shadow-xl mb-16">
           <div className="text-center mb-12">
             <h3 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Ako <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">pracujeme</span>
+              Ako{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                pracujeme
+              </span>
             </h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Náš proces je navrhnutý tak, aby zabezpečil maximálnu transparentnosť a kvalitu výsledkov.
+              Náš proces je navrhnutý tak, aby zabezpečil maximálnu
+              transparentnosť a kvalitu výsledkov.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: "1", title: "Konzultácia", desc: "Analýza požiadaviek a návrh riešenia", gradient: "from-blue-500 to-cyan-500" },
-              { step: "2", title: "Návrh", desc: "Vytvorenie prototypu a technickej špecifikácie", gradient: "from-green-500 to-emerald-500" },
-              { step: "3", title: "Vývoj", desc: "Implementácia s pravidelným reportingom pokroku", gradient: "from-purple-500 to-violet-500" },
-              { step: "4", title: "Nasadenie", desc: "Testing, optimalizácia a spustenie do produkcie", gradient: "from-orange-500 to-red-500" }
+              {
+                step: "1",
+                title: "Konzultácia",
+                desc: "Analýza požiadaviek a návrh riešenia",
+                gradient: "from-blue-500 to-cyan-500",
+              },
+              {
+                step: "2",
+                title: "Návrh",
+                desc: "Vytvorenie prototypu a technickej špecifikácie",
+                gradient: "from-green-500 to-emerald-500",
+              },
+              {
+                step: "3",
+                title: "Vývoj",
+                desc: "Implementácia s pravidelným reportingom pokroku",
+                gradient: "from-purple-500 to-violet-500",
+              },
+              {
+                step: "4",
+                title: "Nasadenie",
+                desc: "Testing, optimalizácia a spustenie do produkcie",
+                gradient: "from-orange-500 to-red-500",
+              },
             ].map((phase, index) => (
-              <div key={index} className="relative text-center group" data-aos="fade-up" data-aos-delay={index * 150}>
-                <div className={`w-16 h-16 bg-gradient-to-r ${phase.gradient} rounded-2xl flex items-center justify-center text-white text-xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform`}>
+              <div
+                key={index}
+                className="relative text-center group"
+                data-aos="fade-up"
+                data-aos-delay={index * 150}
+              >
+                <div
+                  className={`w-16 h-16 bg-gradient-to-r ${phase.gradient} rounded-2xl flex items-center justify-center text-white text-xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform`}
+                >
                   {phase.step}
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">{phase.title}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{phase.desc}</p>
-
-                {index < 3 && (
-                  <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-gray-300 to-gray-200 z-10 transform -translate-y-1/2"></div>
-                )}
+                <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  {phase.title}
+                </h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {phase.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -231,7 +286,8 @@ const WhyUs = () => {
               Pripravení začať váš projekt?
             </h3>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Kontaktujte nás a porozprávajme si o vašich potrebách. Prvá konzultácia je zadarmo.
+              Kontaktujte nás a porozprávajme si o vašich potrebách. Prvá
+              konzultácia je zadarmo.
             </p>
             <Link to="contact" spy={true} smooth={true} duration={700}>
               <Button
@@ -248,8 +304,13 @@ const WhyUs = () => {
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
         }
       `}</style>
     </section>
