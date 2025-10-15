@@ -145,14 +145,14 @@ const Splash = () => {
             {/* Content */}
             <div className="space-y-10">
               <div className="space-y-6">
-                <div className="inline-flex items-center rounded-full px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/50 text-blue-700 text-sm font-medium">
+                <div className="inline-flex items-center rounded-full px-4 py-2 bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200/50 text-[#4c2844] text-sm font-medium">
                   <Code2 className="w-4 h-4 mr-2" />
                   Moderné softvérové riešenia
                 </div>
 
                 <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.3] text-balance mb-8">
                   Transformujeme
-                  <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent leading-[1.3]">
+                  <span className="block bg-gradient-to-r from-[#4c2844] via-purple-600 to-pink-600 bg-clip-text text-transparent leading-[1.3]">
                     digitálne nápady
                   </span>
                   na skutočnosť
@@ -188,7 +188,7 @@ const Splash = () => {
                 <Link to="contact" spy={true} smooth={true} duration={700}>
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200 group"
+                    className="bg-gradient-to-r from-[#4c2844] to-purple-600 hover:from-[#3d1f36] hover:to-purple-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200 group"
                   >
                     Začať projekt
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

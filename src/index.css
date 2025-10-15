@@ -5,14 +5,14 @@
 
 @layer base {
   :root {
-    /* Professional color palette */
+    /* Professional color palette with logo purple */
     --background: 0 0% 100%;
     --foreground: 220 15% 15%;
     --card: 0 0% 100%;
     --card-foreground: 220 15% 15%;
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 15%;
-    --primary: 220 70% 10%;
+    --primary: 313 31% 23%;
     --primary-foreground: 0 0% 98%;
     --secondary: 220 10% 96%;
     --secondary-foreground: 220 15% 25%;
@@ -24,13 +24,13 @@
     --destructive-foreground: 0 0% 98%;
     --border: 220 10% 88%;
     --input: 220 10% 92%;
-    --ring: 220 70% 50%;
+    --ring: 313 31% 40%;
     --radius: 0.5rem;
 
-    /* Custom professional colors */
-    --navy: 220 70% 10%;
-    --navy-light: 220 50% 20%;
-    --navy-lighter: 220 30% 30%;
+    /* Custom colors based on logo purple #4c2844 */
+    --purple-dark: 313 31% 23%;
+    --purple-light: 313 31% 35%;
+    --purple-lighter: 313 20% 45%;
     --gray-50: 220 10% 98%;
     --gray-100: 220 10% 95%;
     --gray-200: 220 10% 88%;
@@ -69,7 +69,7 @@
   }
 
   .gradient-professional {
-    background: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--navy-light)) 100%);
+    background: linear-gradient(135deg, hsl(var(--purple-dark)) 0%, hsl(var(--purple-light)) 100%);
   }
 
   .gradient-subtle {

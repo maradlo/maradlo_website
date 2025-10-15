@@ -98,7 +98,7 @@ const Price = () => {
   const PricingCalculator = () => (
     <div className="p-4 w-72">
       <div className="flex items-center gap-2 mb-4">
-        <Calculator className="w-5 h-5 text-blue-500" />
+        <Calculator className="w-5 h-5 text-[#4c2844]" />
         <span className="font-semibold text-gray-800">Price Calculator</span>
       </div>
       <div className="space-y-3">
@@ -116,7 +116,7 @@ const Price = () => {
         </div>
         <div className="border-t pt-2 flex justify-between">
           <span className="font-bold text-gray-800">Total</span>
-          <span className="font-bold text-blue-600">€11,500</span>
+          <span className="font-bold text-[#4c2844]">€11,500</span>
         </div>
       </div>
     </div>
@@ -173,13 +173,13 @@ const Price = () => {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center rounded-full px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/50 text-blue-700 text-sm font-medium mb-6">
+          <div className="inline-flex items-center rounded-full px-4 py-2 bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200/50 text-[#4c2844] text-sm font-medium mb-6">
             <CreditCard className="w-4 h-4 mr-2" />
             Cenníky služieb
           </div>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.3]">
             Transparentné
-            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent leading-[1.3]">
+            <span className="block bg-gradient-to-r from-[#4c2844] via-purple-600 to-pink-600 bg-clip-text text-transparent leading-[1.3]">
               ceny na mieru
             </span>
           </h2>
@@ -206,7 +206,7 @@ const Price = () => {
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-[#4c2844] to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Najpopulárnejší
                     </span>
                   </div>
@@ -268,7 +268,7 @@ const Price = () => {
           <div className="text-center mb-12">
             <h3 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Ako{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#4c2844] via-purple-600 to-pink-600 bg-clip-text text-transparent">
                 postupujeme
               </span>
             </h3>
@@ -287,7 +287,7 @@ const Price = () => {
                 data-aos-delay={index * 150}
               >
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#4c2844] to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform">
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-xl font-bold text-gray-900 mb-3">

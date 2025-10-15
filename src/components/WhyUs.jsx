@@ -103,7 +103,7 @@ const WhyUs = () => {
   const TechMetrics = () => (
     <div className="p-4 w-64">
       <div className="flex items-center gap-2 mb-4">
-        <Cpu className="w-5 h-5 text-blue-500" />
+        <Cpu className="w-5 h-5 text-[#4c2844]" />
         <span className="font-semibold text-gray-800">Performance</span>
       </div>
       <div className="space-y-3">
@@ -112,11 +112,11 @@ const WhyUs = () => {
           <span className="text-sm font-bold text-green-600">0.8s</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
-          <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2 rounded-full w-5/6"></div>
+          <div className="bg-gradient-to-r from-[#4c2844] to-purple-600 h-2 rounded-full w-5/6"></div>
         </div>
         <div className="grid grid-cols-2 gap-2">
           <div className="text-center">
-            <div className="text-lg font-bold text-blue-600">99.9%</div>
+            <div className="text-lg font-bold text-[#4c2844]">99.9%</div>
             <div className="text-xs text-gray-600">Uptime</div>
           </div>
           <div className="text-center">
@@ -142,13 +142,13 @@ const WhyUs = () => {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center rounded-full px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/50 text-blue-700 text-sm font-medium mb-6">
+          <div className="inline-flex items-center rounded-full px-4 py-2 bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200/50 text-[#4c2844] text-sm font-medium mb-6">
             <Layers className="w-4 h-4 mr-2" />
             Naše služby
           </div>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.3]">
             Komplexné
-            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent leading-[1.3]">
+            <span className="block bg-gradient-to-r from-[#4c2844] via-purple-600 to-pink-600 bg-clip-text text-transparent leading-[1.3]">
               digitálne riešenia
             </span>
           </h2>
@@ -227,7 +227,7 @@ const WhyUs = () => {
           <div className="text-center mb-12">
             <h3 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Ako{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#4c2844] to-purple-600 bg-clip-text text-transparent">
                 pracujeme
               </span>
             </h3>
@@ -299,7 +299,7 @@ const WhyUs = () => {
             <Link to="contact" spy={true} smooth={true} duration={700}>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 py-4 text-lg group"
+                className="bg-gradient-to-r from-[#4c2844] to-purple-600 hover:from-[#3d1f36] hover:to-purple-700 text-white font-semibold px-8 py-4 text-lg group"
               >
                 Začať projekt
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -93,7 +93,7 @@ const CompanyInfo = () => {
   const TechStack = () => (
     <div className="p-4 w-64">
       <div className="flex items-center gap-2 mb-4">
-        <div className="w-6 h-6 rounded bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+        <div className="w-6 h-6 rounded bg-gradient-to-r from-[#4c2844] to-purple-600"></div>
         <span className="font-semibold text-gray-800">Tech Stack</span>
       </div>
       <div className="grid grid-cols-2 gap-2">
@@ -109,14 +109,14 @@ const CompanyInfo = () => {
   const ProjectTimeline = () => (
     <div className="p-4 w-72">
       <div className="flex items-center gap-2 mb-4">
-        <Zap className="w-5 h-5 text-yellow-500" />
+        <Zap className="w-5 h-5 text-[#4c2844]" />
         <span className="font-semibold text-gray-800">Project Timeline</span>
       </div>
       <div className="space-y-3">
         {["Discovery", "Design", "Development", "Launch"].map(
           (phase, index) => (
             <div key={index} className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center text-white text-xs font-bold">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#4c2844] to-purple-600 flex items-center justify-center text-white text-xs font-bold">
                 {index + 1}
               </div>
               <span className="text-sm text-gray-700">{phase}</span>
@@ -146,7 +146,7 @@ const CompanyInfo = () => {
           </div>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Kto sme a čo
-            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-[#4c2844] via-purple-600 to-pink-600 bg-clip-text text-transparent">
               robíme
             </span>
           </h2>
@@ -194,7 +194,7 @@ const CompanyInfo = () => {
                 riešenia, ktoré prinášajú skutočnú hodnotu ich businessu a
                 používateľom.
               </p>
-              <div className="inline-flex items-center justify-center w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full"></div>
+              <div className="inline-flex items-center justify-center w-20 h-1 bg-gradient-to-r from-[#4c2844] to-purple-600 rounded-full"></div>
             </div>
           </div>
 
@@ -244,7 +244,7 @@ const CompanyInfo = () => {
         <div className="text-center">
           <h3 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-12">
             Náš{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#4c2844] to-purple-600 bg-clip-text text-transparent">
               proces
             </span>
           </h3>
