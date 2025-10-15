@@ -180,7 +180,7 @@ const CompanyInfo = () => {
         </div>
 
         {/* Mission Statement with floating elements */}
-        <div className="mb-24">
+        <div className="relative mb-24">
           <div
             className="bg-gradient-to-br from-white/90 to-blue-50/90 backdrop-blur-sm rounded-3xl p-12 border border-white/20 shadow-xl"
             data-aos="fade-up"
@@ -197,6 +197,16 @@ const CompanyInfo = () => {
               <div className="inline-flex items-center justify-center w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full"></div>
             </div>
           </div>
+
+          {/* Floating element - positioned in right margin area */}
+          <FloatingCard className="-top-16 -right-24 hidden 2xl:block" delay="0s">
+            <TechStack />
+          </FloatingCard>
+
+          {/* Floating element - positioned in left margin area */}
+          <FloatingCard className="-bottom-16 -left-32 hidden 2xl:block" delay="3s">
+            <ProjectTimeline />
+          </FloatingCard>
         </div>
 
         {/* Values with gradient cards */}
