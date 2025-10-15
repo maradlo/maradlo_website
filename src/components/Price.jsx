@@ -191,7 +191,7 @@ const Price = () => {
         </div>
 
         {/* Pricing Cards with Floating Elements */}
-        <div className="relative mb-20">
+        <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {packages.map((pkg, index) => (
               <div
@@ -251,18 +251,6 @@ const Price = () => {
               </div>
             ))}
           </div>
-
-          {/* Floating Elements */}
-          <FloatingCard className="top-40 -right-80 hidden xl:block" delay="1s">
-            <PricingCalculator />
-          </FloatingCard>
-
-          <FloatingCard
-            className="bottom-40 -left-80 hidden xl:block"
-            delay="4s"
-          >
-            <TestimonialCard />
-          </FloatingCard>
         </div>
 
         {/* Process */}

@@ -161,7 +161,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
@@ -311,18 +311,6 @@ const Contact = () => {
             <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl"></div>
             <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-white/5 rounded-full"></div>
           </div>
-
-          {/* Floating Elements */}
-          <FloatingCard className="top-56 -right-48 hidden xl:block" delay="1s">
-            <ContactStatus />
-          </FloatingCard>
-
-          <FloatingCard
-            className="bottom-40 -left-80 hidden xl:block"
-            delay="3s"
-          >
-            <ProjectPlanner />
-          </FloatingCard>
         </div>
       </div>
 

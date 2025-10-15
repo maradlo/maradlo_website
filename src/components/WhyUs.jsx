@@ -159,7 +159,7 @@ const WhyUs = () => {
         </div>
 
         {/* Services Grid with Floating Elements */}
-        <div className="relative mb-16">
+        <div className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
@@ -204,15 +204,6 @@ const WhyUs = () => {
               </div>
             ))}
           </div>
-
-          {/* Floating Elements */}
-          <FloatingCard className="top-64 -right-80 hidden xl:block" delay="1s">
-            <APIExample />
-          </FloatingCard>
-
-          <FloatingCard className="top-96 -left-80 hidden xl:block" delay="4s">
-            <TechMetrics />
-          </FloatingCard>
         </div>
 
         {/* Process Section */}

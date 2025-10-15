@@ -225,12 +225,12 @@ const Splash = () => {
             {/* Floating Tech Elements */}
             <div className="relative h-[600px] lg:h-[700px]">
               {/* Code Editor */}
-              <FloatingCard className="top-8 left-4 w-80" delay="0s">
+              <FloatingCard className="top-8 left-4 w-64 lg:w-72" delay="0s">
                 <CodeSnippet />
               </FloatingCard>
 
               {/* Dashboard */}
-              <FloatingCard className="top-32 right-0" delay="2s">
+              <FloatingCard className="top-32 right-4" delay="2s">
                 <Dashboard />
               </FloatingCard>
 
