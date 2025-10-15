@@ -150,9 +150,9 @@ const Contact = () => {
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-[#4c2844] to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <contact.icon className="w-6 h-6 text-white" />
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-[#4c2844] to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <contact.icon className="w-5 h-5 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h4 className="font-semibold text-gray-900 mb-1">
@@ -161,12 +161,12 @@ const Contact = () => {
                       {contact.href !== "#" ? (
                         <a
                           href={contact.href}
-                          className="text-lg font-medium text-primary hover:text-primary/80 transition-colors block mb-1 break-all"
+                          className="text-base font-medium text-primary hover:text-primary/80 transition-colors block mb-1 whitespace-nowrap overflow-hidden text-ellipsis"
                         >
                           {contact.value}
                         </a>
                       ) : (
-                        <div className="text-lg font-medium text-gray-900 mb-1 break-words">
+                        <div className="text-base font-medium text-gray-900 mb-1 break-words">
                           {contact.value}
                         </div>
                       )}

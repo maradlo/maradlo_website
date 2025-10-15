@@ -1,6 +1,7 @@
 {
   "short_name": "Maradlo",
-  "name": "Maradlo - Web and App Development Services",
+  "name": "Maradlo - Profesionálne Webové a Mobilné Aplikácie",
+  "description": "Vytvárame profesionálne webové a mobilné aplikácie na mieru",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#4c2844",
   "background_color": "#ffffff"
 }
