@@ -25,7 +25,7 @@ const Price = () => {
       name: "Základný balík",
       description: "Ideálny pre menšie projekty a startupy",
       features: [
-        "Webová aplikácia (do 10 stránok)",
+        "Webová aplikácia (do 5 stránok)",
         "Responzívny dizajn",
         "Základná SEO optimalizácia",
         "Kontaktný formulár",
@@ -132,14 +132,14 @@ const Price = () => {
         </div>
       </div>
       <p className="text-sm text-gray-700 mb-3">
-        "Maradlo vytvorilo pre nás fantastickú aplikáciu. Profesionálny prístup
-        a kvalita."
+        Maradlo pre nás vytvorilo fantastickú webovú stránku, ktorá nám pomohla
+        získať nových klientov. Profesionálny prístup a kvalita.
       </p>
       <div className="flex items-center gap-2">
         <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
         <div>
-          <div className="text-sm font-bold text-gray-800">Ján Novák</div>
-          <div className="text-xs text-gray-600">CEO, TechCorp</div>
+          <div className="text-sm font-bold text-gray-800">Lukáš S.</div>
+          <div className="text-xs text-gray-600">Progressbarber.sk</div>
         </div>
       </div>
     </div>
@@ -253,12 +253,18 @@ const Price = () => {
           </div>
 
           {/* Floating element - positioned in right margin area, below the cards */}
-          <FloatingCard className="-bottom-48 -right-32 hidden 2xl:block z-10" delay="1s">
+          <FloatingCard
+            className="-bottom-48 -right-32 hidden 2xl:block z-10"
+            delay="1s"
+          >
             <PricingCalculator />
           </FloatingCard>
 
           {/* Floating element - positioned in left margin area, same level as right card */}
-          <FloatingCard className="-bottom-48 -left-32 hidden 2xl:block z-10" delay="4s">
+          <FloatingCard
+            className="-bottom-48 -left-32 hidden 2xl:block z-10"
+            delay="4s"
+          >
             <TestimonialCard />
           </FloatingCard>
         </div>

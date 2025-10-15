@@ -163,8 +163,9 @@ const Splash = () => {
                   <strong className="text-gray-900">
                     výkonné webové aplikácie
                   </strong>{" "}
-                  a mobilné riešenia, ktoré poháňajú moderné podnikanie a
-                  prinášajú skutočnú hodnotu.
+                  a <strong className="text-gray-900">mobilné riešenia</strong>,
+                  ktoré poháňajú moderné podnikanie a prinášajú skutočnú
+                  hodnotu.
                 </p>
               </div>
 
@@ -190,7 +191,7 @@ const Splash = () => {
                     size="lg"
                     className="bg-gradient-to-r from-[#4c2844] to-purple-600 hover:from-[#3d1f36] hover:to-purple-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200 group"
                   >
-                    Začať projekt
+                    Začať spoluprácu
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
@@ -213,7 +214,7 @@ const Splash = () => {
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                  <span>50+ úspešných projektov</span>
+                  <span>20+ úspešných projektov</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>

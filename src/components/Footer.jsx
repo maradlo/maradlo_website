@@ -23,7 +23,7 @@ const Footer = () => {
   const companyInfo = [
     "Profesionálne softvérové riešenia",
     "5+ rokov skúseností",
-    "50+ úspešných projektov",
+    "20+ úspešných projektov",
   ];
 
   return (
@@ -41,16 +41,6 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Company Info */}
             <div className="lg:col-span-2 space-y-6">
-              <div className="flex items-center space-x-3">
-                <img src={Logo} alt="Maradlo Logo" className="h-10 w-auto" />
-                <div className="w-px h-8 bg-gradient-to-b from-purple-300 to-transparent"></div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-green-400 text-sm font-medium">
-                    Online
-                  </span>
-                </div>
-              </div>
               <div className="max-w-md">
                 <h3 className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-4">
                   Maradlo s.r.o.
@@ -122,21 +112,21 @@ const Footer = () => {
                   </span>
                 </a>
                 <a
-                  href="tel:+421917722223"
+                  href="tel:+421904237003"
                   className="group flex items-center gap-3 text-gray-300 hover:text-green-400 transition-all duration-200"
                 >
                   <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-emerald-500/30 transition-all">
                     <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   </div>
                   <span className="text-sm group-hover:translate-x-1 transition-transform">
-                    +421 917 722 223
+                    +421 904 237 003
                   </span>
                 </a>
                 <div className="flex items-center gap-3 text-gray-300">
                   <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-300/20 to-pink-300/20 flex items-center justify-center">
                     <MapPin className="w-4 h-4" />
                   </div>
-                  <span className="text-sm">Bratislava, Slovensko</span>
+                  <span className="text-sm">Tvrdomestice 96, Slovensko</span>
                 </div>
                 <div className="pt-2">
                   <div className="flex items-center gap-2">
@@ -165,17 +155,6 @@ const Footer = () => {
                 <ArrowUp className="w-3 h-3 group-hover:-translate-y-0.5 transition-transform" />
                 Späť hore
               </button>
-            </div>
-            <div className="flex items-center gap-6 text-sm text-gray-400">
-              <div className="flex items-center gap-2">
-                <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
-                <span>IČO: 12345678</span>
-              </div>
-              <div className="w-px h-4 bg-gray-700"></div>
-              <div className="flex items-center gap-2">
-                <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
-                <span>Bratislava, SK</span>
-              </div>
             </div>
           </div>
         </div>

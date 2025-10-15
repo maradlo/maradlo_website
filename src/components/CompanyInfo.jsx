@@ -40,7 +40,7 @@ const CompanyInfo = () => {
       gradient: "from-blue-500 to-indigo-600",
     },
     {
-      number: "50+",
+      number: "20+",
       label: "Dokončených projektov",
       icon: Target,
       gradient: "from-green-500 to-emerald-600",
@@ -64,28 +64,28 @@ const CompanyInfo = () => {
       icon: Users,
       title: "Klientsky prístup",
       description:
-        "Každý projekt pristupujeme individuálne s dôrazom na potreby a ciele našich klientov.",
+        "Ku každému projektu pristupujeme individuálne s dôrazom na potreby a ciele našich klientov.",
       gradient: "from-blue-500 to-cyan-500",
     },
     {
       icon: Shield,
       title: "Kvalita a bezpečnosť",
       description:
-        "Dodržujeme najvyššie štandardy kvality kódu, bezpečnosti a testovanie každého riešenia.",
+        "Dodržujeme najvyššie štandardy kvality kódu, bezpečnosti a testovanie každého riešenia, ako aj dôsledné nasadenie procesov CI/CD.",
       gradient: "from-green-500 to-emerald-500",
     },
     {
       icon: Clock,
       title: "Termíny a spoľahlivosť",
       description:
-        "Rešpektujeme dohodnuté termíny a zabezpečujeme transparentnú komunikáciu počas celého procesu.",
+        "Rešpektujeme dohodnuté termíny a zabezpečujeme transparentnú komunikáciu počas celého procesu, aj po spustení projektu.",
       gradient: "from-purple-500 to-violet-500",
     },
     {
       icon: HeartHandshake,
       title: "Dlhodobé partnerstvo",
       description:
-        "Poskytujeme kompletnú podporu aj po dokončení projektu, budujeme dlhodobé partnerstvá.",
+        "Poskytujeme kompletnú podporu aj po dokončení projektu, budujeme dlhodobé partnerstvá a poskytujeme konzultácie ako aj školenia pre váš tím.",
       gradient: "from-orange-500 to-red-500",
     },
   ];
@@ -97,7 +97,16 @@ const CompanyInfo = () => {
         <span className="font-semibold text-gray-800">Tech Stack</span>
       </div>
       <div className="grid grid-cols-2 gap-2">
-        {["React", "Node.js", "Python", "AWS"].map((tech, index) => (
+        {[
+          "Typescript",
+          "NodeJS",
+          "Flutter",
+          "Swift",
+          "React",
+          "Vue",
+          "Database",
+          "CI/CD",
+        ].map((tech, index) => (
           <div key={index} className="bg-gray-50 rounded-lg p-2 text-center">
             <div className="text-xs font-medium text-gray-700">{tech}</div>
           </div>
@@ -199,12 +208,18 @@ const CompanyInfo = () => {
           </div>
 
           {/* Floating element - positioned in right margin area */}
-          <FloatingCard className="-top-16 -right-24 hidden 2xl:block" delay="0s">
+          <FloatingCard
+            className="-top-16 -right-24 hidden 2xl:block"
+            delay="0s"
+          >
             <TechStack />
           </FloatingCard>
 
           {/* Floating element - positioned in left margin area */}
-          <FloatingCard className="-bottom-16 -left-32 hidden 2xl:block" delay="3s">
+          <FloatingCard
+            className="-bottom-16 -left-32 hidden 2xl:block"
+            delay="3s"
+          >
             <ProjectTimeline />
           </FloatingCard>
         </div>
@@ -286,7 +301,6 @@ const CompanyInfo = () => {
                   </h4>
                   <p className="text-gray-600 leading-relaxed">{phase.desc}</p>
                 </div>
-
               </div>
             ))}
           </div>

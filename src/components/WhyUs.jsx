@@ -41,14 +41,14 @@ const WhyUs = () => {
       title: "Webové aplikácie",
       description:
         "Moderné, responzívne webové aplikácie postavené na najnovších technológiách.",
-      technologies: ["React", "Next.js", "Vue.js", "Angular"],
+      technologies: ["React", "Vue", "Tailwind", "Shadcn"],
       gradient: "from-blue-500 to-indigo-600",
     },
     {
       icon: Smartphone,
       title: "Mobilné aplikácie",
       description:
-        "Natívne a cross-platform mobilné aplikácie pre iOS a Android platformy.",
+        "Natívne a cross-platform mobilné aplikácie pre platformy iOS a Android.",
       technologies: ["React Native", "Flutter", "Swift", "Kotlin"],
       gradient: "from-green-500 to-emerald-600",
     },
@@ -57,7 +57,7 @@ const WhyUs = () => {
       title: "Backend systémy",
       description:
         "Škálovateľné backend riešenia s dôrazom na výkon a bezpečnosť.",
-      technologies: ["Node.js", "Python", "PostgreSQL", "MongoDB"],
+      technologies: ["Node", "Python", "PostgreSQL", "MongoDB"],
       gradient: "from-purple-500 to-violet-600",
     },
     {

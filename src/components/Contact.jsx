@@ -24,8 +24,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefón",
-      value: "+421 917 722 223",
-      href: "tel:+421917722223",
+      value: "+421 904 237 003",
+      href: "tel:+421904237003",
       description: "Pondelok - Piatok, 9:00 - 17:00",
     },
     {
@@ -38,7 +38,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Adresa",
-      value: "Bratislava, Slovensko",
+      value: "Tvrdomestice 96",
       href: "#",
       description: "Stretnutie po dohode",
     },
@@ -81,39 +81,6 @@ const Contact = () => {
         <div className="border-t pt-2">
           <div className="text-xs text-gray-500">Last active: Just now</div>
         </div>
-      </div>
-    </div>
-  );
-
-  const ProjectPlanner = () => (
-    <div className="p-4 w-72">
-      <div className="flex items-center gap-2 mb-4">
-        <Calendar className="w-5 h-5 text-blue-500" />
-        <span className="font-semibold text-gray-800">Project Timeline</span>
-      </div>
-      <div className="space-y-2">
-        {["Consultation", "Planning", "Development", "Launch"].map(
-          (phase, index) => (
-            <div key={index} className="flex items-center gap-3">
-              <div
-                className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-                  index < 2
-                    ? "bg-green-500 text-white"
-                    : "bg-gray-200 text-gray-600"
-                }`}
-              >
-                {index + 1}
-              </div>
-              <span
-                className={`text-sm ${
-                  index < 2 ? "text-gray-900 font-medium" : "text-gray-500"
-                }`}
-              >
-                {phase}
-              </span>
-            </div>
-          )
-        )}
       </div>
     </div>
   );
@@ -233,7 +200,7 @@ const Contact = () => {
                   className="flex-1 bg-gradient-to-r from-[#4c2844] to-purple-600 hover:from-[#3d1f36] hover:to-purple-700 px-6 py-4 text-base"
                 >
                   <a
-                    href="tel:+421917722223"
+                    href="tel:+421904237003"
                     className="flex items-center justify-center gap-3"
                   >
                     <Phone className="w-5 h-5" />
@@ -313,7 +280,10 @@ const Contact = () => {
           </div>
 
           {/* Floating element - positioned in right margin area */}
-          <FloatingCard className="top-1/3 -right-28 hidden 2xl:block z-10" delay="1s">
+          <FloatingCard
+            className="top-1/3 -right-28 hidden 2xl:block z-10"
+            delay="1s"
+          >
             <ContactStatus />
           </FloatingCard>
         </div>
