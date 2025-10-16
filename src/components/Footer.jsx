@@ -122,12 +122,6 @@ const Footer = () => {
                     +421 904 237 003
                   </span>
                 </a>
-                <div className="flex items-center gap-3 text-gray-300">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-300/20 to-pink-300/20 flex items-center justify-center">
-                    <MapPin className="w-4 h-4" />
-                  </div>
-                  <span className="text-sm">Tvrdomestice 96, Slovensko</span>
-                </div>
                 <div className="pt-2">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>

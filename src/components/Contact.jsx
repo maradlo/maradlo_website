@@ -38,9 +38,9 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Adresa",
-      value: "Tvrdomestice 96",
+      value: "Stretnutie po dohode",
       href: "#",
-      description: "Stretnutie po dohode",
+      description: "",
     },
     {
       icon: Clock,

@@ -21,7 +21,7 @@ const Navbar = () => {
     { to: "company-info", label: "O nás" },
     { to: "why-us", label: "Služby" },
     { to: "price", label: "Cena" },
-    { to: "contact", label: "Kontakt" },
+    // '{ to: "contact", label: "Kontakt" },'
   ];
 
   return (
