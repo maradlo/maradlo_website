@@ -94,7 +94,7 @@ const CompanyInfo = () => {
     <div className="p-4 w-64">
       <div className="flex items-center gap-2 mb-4">
         <div className="w-6 h-6 rounded bg-gradient-to-r from-[#4c2844] to-purple-600"></div>
-        <span className="font-semibold text-gray-800">Tech Stack</span>
+        <span className="font-semibold text-gray-800">Technológie</span>
       </div>
       <div className="grid grid-cols-2 gap-2">
         {[
@@ -119,10 +119,10 @@ const CompanyInfo = () => {
     <div className="p-4 w-72">
       <div className="flex items-center gap-2 mb-4">
         <Zap className="w-5 h-5 text-[#4c2844]" />
-        <span className="font-semibold text-gray-800">Project Timeline</span>
+        <span className="font-semibold text-gray-800">Harmonogram projektu</span>
       </div>
       <div className="space-y-3">
-        {["Discovery", "Design", "Development", "Launch"].map(
+        {["Analýza", "Dizajn", "Vývoj", "Spustenie"].map(
           (phase, index) => (
             <div key={index} className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#4c2844] to-purple-600 flex items-center justify-center text-white text-xs font-bold">
@@ -138,13 +138,13 @@ const CompanyInfo = () => {
 
   return (
     <section className="relative py-24 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/40"></div>
+      {/* Background - white for contrast */}
+      <div className="absolute inset-0 bg-white"></div>
 
       {/* Geometric Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-40 left-20 w-64 h-64 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-40 right-20 w-80 h-80 bg-gradient-to-r from-indigo-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 left-20 w-64 h-64 bg-gradient-to-r from-blue-400/5 to-purple-400/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 right-20 w-80 h-80 bg-gradient-to-r from-indigo-400/5 to-blue-400/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">

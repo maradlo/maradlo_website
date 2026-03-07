@@ -18,6 +18,7 @@ const Footer = () => {
     { name: "Webové aplikácie", icon: Globe },
     { name: "Mobilné aplikácie", icon: Smartphone },
     { name: "API integrácie", icon: Code },
+    { name: "Naše aplikácie", icon: ExternalLink, href: "#my-apps" },
   ];
 
   const companyInfo = [

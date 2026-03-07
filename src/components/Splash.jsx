@@ -83,7 +83,7 @@ const Splash = () => {
           </div>
           <div className="bg-purple-50 p-2 rounded text-center">
             <div className="text-lg font-bold text-purple-600">4.2</div>
-            <div className="text-xs text-gray-600">Rating</div>
+            <div className="text-xs text-gray-600">Hodnotenie</div>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@ const Splash = () => {
   );
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-[80vh] lg:min-h-screen flex items-center overflow-hidden">
       {/* Advanced Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/40"></div>
 
@@ -195,7 +195,7 @@ const Splash = () => {
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
-                <Link to="company-info" spy={true} smooth={true} duration={700}>
+                <Link to="my-apps" spy={true} smooth={true} duration={700}>
                   <Button
                     variant="outline"
                     size="lg"
@@ -224,7 +224,7 @@ const Splash = () => {
             </div>
 
             {/* Floating Tech Elements */}
-            <div className="relative h-[600px] lg:h-[700px]">
+            <div className="relative h-[600px] lg:h-[700px] hidden lg:block">
               {/* Code Editor */}
               <FloatingCard className="top-8 left-4 w-64 lg:w-72" delay="0s">
                 <CodeSnippet />
@@ -276,9 +276,9 @@ const Splash = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-800 text-sm">
-                      Mobile
+                      Mobilné
                     </div>
-                    <div className="text-xs text-gray-600">Apps</div>
+                    <div className="text-xs text-gray-600">Aplikácie</div>
                   </div>
                 </div>
               </FloatingCard>

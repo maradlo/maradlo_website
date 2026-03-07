@@ -19,9 +19,9 @@ const Navbar = () => {
 
   const navItems = [
     { to: "company-info", label: "O nás" },
+    { to: "my-apps", label: "Aplikácie" },
     { to: "why-us", label: "Služby" },
     { to: "price", label: "Cena" },
-    // '{ to: "contact", label: "Kontakt" },'
   ];
 
   return (

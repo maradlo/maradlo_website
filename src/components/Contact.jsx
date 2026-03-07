@@ -67,19 +67,19 @@ const Contact = () => {
     <div className="p-4 w-64">
       <div className="flex items-center gap-2 mb-4">
         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-        <span className="font-semibold text-gray-800">Online Now</span>
+        <span className="font-semibold text-gray-800">Práve online</span>
       </div>
       <div className="space-y-3">
         <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Response Time</span>
+          <span className="text-sm text-gray-600">Čas odpovede</span>
           <span className="text-sm font-bold text-green-600">&lt; 2h</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Availability</span>
-          <span className="text-sm font-bold text-blue-600">Mo-Fr</span>
+          <span className="text-sm text-gray-600">Dostupnosť</span>
+          <span className="text-sm font-bold text-blue-600">Po-Pi</span>
         </div>
         <div className="border-t pt-2">
-          <div className="text-xs text-gray-500">Last active: Just now</div>
+          <div className="text-xs text-gray-500">Naposledy aktívny: Práve teraz</div>
         </div>
       </div>
     </div>

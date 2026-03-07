@@ -89,7 +89,7 @@ const WhyUs = () => {
     <div className="p-4 w-80 font-mono text-sm">
       <div className="flex items-center gap-2 mb-3">
         <div className="w-3 h-3 rounded-full bg-green-500"></div>
-        <span className="text-gray-600 font-sans text-xs">API Response</span>
+        <span className="text-gray-600 font-sans text-xs">API Odpoveď</span>
       </div>
       <div className="bg-gray-900 rounded-lg p-3 text-green-400">
         <div>{"{"}</div>
@@ -104,11 +104,11 @@ const WhyUs = () => {
     <div className="p-4 w-64">
       <div className="flex items-center gap-2 mb-4">
         <Cpu className="w-5 h-5 text-[#4c2844]" />
-        <span className="font-semibold text-gray-800">Performance</span>
+        <span className="font-semibold text-gray-800">Výkon</span>
       </div>
       <div className="space-y-3">
         <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Load Time</span>
+          <span className="text-sm text-gray-600">Čas načítania</span>
           <span className="text-sm font-bold text-green-600">0.8s</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
@@ -121,7 +121,7 @@ const WhyUs = () => {
           </div>
           <div className="text-center">
             <div className="text-lg font-bold text-green-600">A+</div>
-            <div className="text-xs text-gray-600">Security</div>
+            <div className="text-xs text-gray-600">Bezpečnosť</div>
           </div>
         </div>
       </div>

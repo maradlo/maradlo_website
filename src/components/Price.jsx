@@ -99,23 +99,23 @@ const Price = () => {
     <div className="p-4 w-72">
       <div className="flex items-center gap-2 mb-4">
         <Calculator className="w-5 h-5 text-[#4c2844]" />
-        <span className="font-semibold text-gray-800">Price Calculator</span>
+        <span className="font-semibold text-gray-800">Cenová kalkulačka</span>
       </div>
       <div className="space-y-3">
         <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Development</span>
+          <span className="text-sm text-gray-600">Vývoj</span>
           <span className="text-sm font-bold">€8,000</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Design</span>
+          <span className="text-sm text-gray-600">Dizajn</span>
           <span className="text-sm font-bold">€2,000</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Testing</span>
+          <span className="text-sm text-gray-600">Testovanie</span>
           <span className="text-sm font-bold">€1,500</span>
         </div>
         <div className="border-t pt-2 flex justify-between">
-          <span className="font-bold text-gray-800">Total</span>
+          <span className="font-bold text-gray-800">Spolu</span>
           <span className="font-bold text-[#4c2844]">€11,500</span>
         </div>
       </div>
@@ -147,13 +147,13 @@ const Price = () => {
 
   return (
     <section className="relative py-24 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/40"></div>
+      {/* Background - white for contrast */}
+      <div className="absolute inset-0 bg-white"></div>
 
       {/* Geometric Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-indigo-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-blue-400/5 to-indigo-400/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-400/5 to-pink-400/5 rounded-full blur-3xl"></div>
       </div>
 
       {/* Grid Pattern */}

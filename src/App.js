@@ -4,6 +4,7 @@ const Navbar = lazy(() => import('./components/Navbar'));
 const Splash = lazy(() => import('./components/Splash'));
 const CompanyInfo = lazy(() => import('./components/CompanyInfo'));
 const WhyUs = lazy(() => import('./components/WhyUs'));
+const MyApps = lazy(() => import('./components/MyApps'));
 const Price = lazy(() => import('./components/Price'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
@@ -18,6 +19,9 @@ function App() {
         </div>
         <div id="company-info">
           <CompanyInfo />
+        </div>
+        <div id="my-apps">
+          <MyApps />
         </div>
         <div id="why-us">
           <WhyUs />
