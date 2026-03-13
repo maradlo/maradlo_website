@@ -40,14 +40,14 @@ const Splash = () => {
       <div className="space-y-1 text-gray-800">
         <div>
           <span className="text-blue-600">const</span>{" "}
-          <span className="text-purple-600">app</span> ={" "}
+          <span className="text-sky-600">app</span> ={" "}
           <span className="text-green-600">express</span>();
         </div>
         <div>
           <span className="text-blue-600">app</span>.
           <span className="text-yellow-600">get</span>(
           <span className="text-green-600">'/api'</span>,{" "}
-          <span className="text-purple-600">handler</span>);
+          <span className="text-sky-600">handler</span>);
         </div>
         <div>
           <span className="text-blue-600">app</span>.
@@ -81,8 +81,8 @@ const Splash = () => {
             <div className="text-lg font-bold text-green-600">89%</div>
             <div className="text-xs text-gray-600">Konverzia</div>
           </div>
-          <div className="bg-purple-50 p-2 rounded text-center">
-            <div className="text-lg font-bold text-purple-600">4.2</div>
+          <div className="bg-sky-50 p-2 rounded text-center">
+            <div className="text-lg font-bold text-sky-600">4.2</div>
             <div className="text-xs text-gray-600">Hodnotenie</div>
           </div>
         </div>
@@ -120,9 +120,9 @@ const Splash = () => {
 
       {/* Geometric Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-sky-400/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-indigo-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-400/5 to-pink-400/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-sky-400/5 to-teal-400/5 rounded-full blur-3xl"></div>
       </div>
 
       {/* Grid Pattern */}
@@ -145,14 +145,14 @@ const Splash = () => {
             {/* Content */}
             <div className="space-y-10">
               <div className="space-y-6">
-                <div className="inline-flex items-center rounded-full px-4 py-2 bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200/50 text-[#4c2844] text-sm font-medium">
+                <div className="inline-flex items-center rounded-full px-4 py-2 bg-gradient-to-r from-sky-50 to-teal-50 border border-sky-200/50 text-[#2968A3] text-sm font-medium">
                   <Code2 className="w-4 h-4 mr-2" />
                   Moderné softvérové riešenia
                 </div>
 
                 <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.3] text-balance mb-8">
                   Transformujeme
-                  <span className="block bg-gradient-to-r from-[#4c2844] via-purple-600 to-pink-600 bg-clip-text text-transparent leading-[1.3]">
+                  <span className="block bg-gradient-to-r from-[#2968A3] via-sky-500 to-teal-500 bg-clip-text text-transparent leading-[1.3]">
                     digitálne nápady
                   </span>
                   na skutočnosť
@@ -189,9 +189,9 @@ const Splash = () => {
                 <Link to="contact" spy={true} smooth={true} duration={700}>
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-[#4c2844] to-purple-600 hover:from-[#3d1f36] hover:to-purple-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200 group"
+                    className="bg-gradient-to-r from-[#2968A3] to-sky-500 hover:from-[#1E5580] hover:to-sky-600 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200 group"
                   >
-                    Začať spoluprácu
+                    Začať projekt
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
@@ -207,18 +207,17 @@ const Splash = () => {
               </div>
 
               {/* Trust indicators */}
-              <div className="flex items-center gap-8 pt-8 border-t border-gray-200/50">
-                <div className="flex items-center gap-2 text-sm text-gray-600">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span>5+ rokov skúseností</span>
+              <div className="flex items-center gap-6 pt-8 border-t border-gray-200/50">
+                <div className="text-sm text-gray-500">
+                  <span className="font-semibold text-gray-900">5+</span> rokov skúseností
                 </div>
-                <div className="flex items-center gap-2 text-sm text-gray-600">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                  <span>20+ úspešných projektov</span>
+                <div className="w-px h-4 bg-gray-200"></div>
+                <div className="text-sm text-gray-500">
+                  <span className="font-semibold text-gray-900">20+</span> projektov
                 </div>
-                <div className="flex items-center gap-2 text-sm text-gray-600">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                  <span>100% spokojnosť</span>
+                <div className="w-px h-4 bg-gray-200"></div>
+                <div className="text-sm text-gray-500">
+                  <span className="font-semibold text-gray-900">100%</span> spokojnosť
                 </div>
               </div>
             </div>
@@ -271,8 +270,8 @@ const Splash = () => {
 
               <FloatingCard className="bottom-8 right-4 p-4" delay="5s">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center">
-                    <Smartphone className="w-4 h-4 text-purple-600" />
+                  <div className="w-8 h-8 rounded-lg bg-teal-100 flex items-center justify-center">
+                    <Smartphone className="w-4 h-4 text-teal-600" />
                   </div>
                   <div>
                     <div className="font-semibold text-gray-800 text-sm">
@@ -287,17 +286,6 @@ const Splash = () => {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
-        }
-      `}</style>
     </section>
   );
 };

@@ -86,7 +86,7 @@ const MyApps = () => {
         "Ultimátna mriežková strategická hra. Súťažte proti AI na štyroch úrovniach obtiažnosti.",
       category: "Puzzle",
       icon: LayoutGrid,
-      gradient: "from-violet-500 to-purple-600",
+      gradient: "from-sky-500 to-blue-600",
       appStoreUrl:
         "https://apps.apple.com/ca/app/grid-genius/id6736571131",
     },
@@ -102,7 +102,7 @@ const MyApps = () => {
       {/* Subtle decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-r from-orange-400/5 to-rose-400/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-r from-purple-400/5 to-blue-400/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-r from-sky-400/5 to-blue-400/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">

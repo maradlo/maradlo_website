@@ -58,7 +58,7 @@ const WhyUs = () => {
       description:
         "Škálovateľné backend riešenia s dôrazom na výkon a bezpečnosť.",
       technologies: ["Node", "Python", "PostgreSQL", "MongoDB"],
-      gradient: "from-purple-500 to-violet-600",
+      gradient: "from-sky-500 to-blue-600",
     },
     {
       icon: Cloud,
@@ -74,7 +74,7 @@ const WhyUs = () => {
       description:
         "Integrácia s externými službami a vytvorenie vlastných API riešení.",
       technologies: ["REST", "GraphQL", "Webhooks", "Microservices"],
-      gradient: "from-pink-500 to-purple-600",
+      gradient: "from-teal-500 to-sky-600",
     },
     {
       icon: Zap,
@@ -103,7 +103,7 @@ const WhyUs = () => {
   const TechMetrics = () => (
     <div className="p-4 w-64">
       <div className="flex items-center gap-2 mb-4">
-        <Cpu className="w-5 h-5 text-[#4c2844]" />
+        <Cpu className="w-5 h-5 text-[#2968A3]" />
         <span className="font-semibold text-gray-800">Výkon</span>
       </div>
       <div className="space-y-3">
@@ -112,11 +112,11 @@ const WhyUs = () => {
           <span className="text-sm font-bold text-green-600">0.8s</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
-          <div className="bg-gradient-to-r from-[#4c2844] to-purple-600 h-2 rounded-full w-5/6"></div>
+          <div className="bg-gradient-to-r from-[#2968A3] to-sky-500 h-2 rounded-full w-5/6"></div>
         </div>
         <div className="grid grid-cols-2 gap-2">
           <div className="text-center">
-            <div className="text-lg font-bold text-[#4c2844]">99.9%</div>
+            <div className="text-lg font-bold text-[#2968A3]">99.9%</div>
             <div className="text-xs text-gray-600">Uptime</div>
           </div>
           <div className="text-center">
@@ -135,20 +135,20 @@ const WhyUs = () => {
 
       {/* Geometric Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-r from-sky-400/10 to-teal-400/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-400/10 to-indigo-400/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center rounded-full px-4 py-2 bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200/50 text-[#4c2844] text-sm font-medium mb-6">
+          <div className="inline-flex items-center rounded-full px-4 py-2 bg-gradient-to-r from-sky-50 to-teal-50 border border-sky-200/50 text-[#2968A3] text-sm font-medium mb-6">
             <Layers className="w-4 h-4 mr-2" />
             Naše služby
           </div>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.3]">
             Komplexné
-            <span className="block bg-gradient-to-r from-[#4c2844] via-purple-600 to-pink-600 bg-clip-text text-transparent leading-[1.3]">
+            <span className="block bg-gradient-to-r from-[#2968A3] via-sky-500 to-teal-500 bg-clip-text text-transparent leading-[1.3]">
               digitálne riešenia
             </span>
           </h2>
@@ -164,7 +164,7 @@ const WhyUs = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className="group relative bg-white rounded-2xl p-8 border border-gray-100 shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
@@ -223,11 +223,11 @@ const WhyUs = () => {
         </div>
 
         {/* Process Section */}
-        <div className="bg-gradient-to-br from-white/90 to-blue-50/90 backdrop-blur-sm rounded-3xl p-12 border border-white/20 shadow-xl mb-16">
+        <div className="bg-gradient-to-br from-white to-blue-50 rounded-3xl p-12 border border-gray-100 shadow-card mb-16">
           <div className="text-center mb-12">
             <h3 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Ako{" "}
-              <span className="bg-gradient-to-r from-[#4c2844] to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#2968A3] to-sky-500 bg-clip-text text-transparent">
                 pracujeme
               </span>
             </h3>
@@ -255,7 +255,7 @@ const WhyUs = () => {
                 step: "3",
                 title: "Vývoj",
                 desc: "Implementácia s pravidelným reportingom pokroku",
-                gradient: "from-purple-500 to-violet-500",
+                gradient: "from-sky-500 to-blue-500",
               },
               {
                 step: "4",
@@ -288,7 +288,7 @@ const WhyUs = () => {
 
         {/* CTA Section */}
         <div className="text-center" data-aos="fade-up">
-          <div className="bg-gradient-to-br from-white/90 to-indigo-50/90 backdrop-blur-sm rounded-3xl p-12 border border-white/20 shadow-xl">
+          <div className="bg-gradient-to-br from-white to-indigo-50 rounded-3xl p-12 border border-gray-100 shadow-card">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               Pripravení začať váš projekt?
             </h3>
@@ -299,7 +299,7 @@ const WhyUs = () => {
             <Link to="contact" spy={true} smooth={true} duration={700}>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-[#4c2844] to-purple-600 hover:from-[#3d1f36] hover:to-purple-700 text-white font-semibold px-8 py-4 text-lg group"
+                className="bg-gradient-to-r from-[#2968A3] to-sky-500 hover:from-[#1E5580] hover:to-sky-600 text-white font-semibold px-8 py-4 text-lg group"
               >
                 Začať projekt
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -309,17 +309,6 @@ const WhyUs = () => {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
-        }
-      `}</style>
     </section>
   );
 };

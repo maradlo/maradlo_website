@@ -49,7 +49,7 @@ const CompanyInfo = () => {
       number: "24/7",
       label: "Technická podpora",
       icon: Shield,
-      gradient: "from-purple-500 to-violet-600",
+      gradient: "from-sky-500 to-blue-600",
     },
     {
       number: "100%",
@@ -79,7 +79,7 @@ const CompanyInfo = () => {
       title: "Termíny a spoľahlivosť",
       description:
         "Rešpektujeme dohodnuté termíny a zabezpečujeme transparentnú komunikáciu počas celého procesu, aj po spustení projektu.",
-      gradient: "from-purple-500 to-violet-500",
+      gradient: "from-sky-500 to-blue-500",
     },
     {
       icon: HeartHandshake,
@@ -93,7 +93,7 @@ const CompanyInfo = () => {
   const TechStack = () => (
     <div className="p-4 w-64">
       <div className="flex items-center gap-2 mb-4">
-        <div className="w-6 h-6 rounded bg-gradient-to-r from-[#4c2844] to-purple-600"></div>
+        <div className="w-6 h-6 rounded bg-gradient-to-r from-[#2968A3] to-sky-500"></div>
         <span className="font-semibold text-gray-800">Technológie</span>
       </div>
       <div className="grid grid-cols-2 gap-2">
@@ -118,14 +118,14 @@ const CompanyInfo = () => {
   const ProjectTimeline = () => (
     <div className="p-4 w-72">
       <div className="flex items-center gap-2 mb-4">
-        <Zap className="w-5 h-5 text-[#4c2844]" />
+        <Zap className="w-5 h-5 text-[#2968A3]" />
         <span className="font-semibold text-gray-800">Harmonogram projektu</span>
       </div>
       <div className="space-y-3">
         {["Analýza", "Dizajn", "Vývoj", "Spustenie"].map(
           (phase, index) => (
             <div key={index} className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#4c2844] to-purple-600 flex items-center justify-center text-white text-xs font-bold">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#2968A3] to-sky-500 flex items-center justify-center text-white text-xs font-bold">
                 {index + 1}
               </div>
               <span className="text-sm text-gray-700">{phase}</span>
@@ -143,7 +143,7 @@ const CompanyInfo = () => {
 
       {/* Geometric Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-40 left-20 w-64 h-64 bg-gradient-to-r from-blue-400/5 to-purple-400/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 left-20 w-64 h-64 bg-gradient-to-r from-blue-400/5 to-sky-400/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-40 right-20 w-80 h-80 bg-gradient-to-r from-indigo-400/5 to-blue-400/5 rounded-full blur-3xl"></div>
       </div>
 
@@ -155,7 +155,7 @@ const CompanyInfo = () => {
           </div>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Kto sme a čo
-            <span className="block bg-gradient-to-r from-[#4c2844] via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-[#2968A3] via-sky-500 to-teal-500 bg-clip-text text-transparent">
               robíme
             </span>
           </h2>
@@ -167,11 +167,11 @@ const CompanyInfo = () => {
         </div>
 
         {/* Stats with modern design */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-card hover:shadow-card-hover transition-all duration-300"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -191,7 +191,7 @@ const CompanyInfo = () => {
         {/* Mission Statement with floating elements */}
         <div className="relative mb-24">
           <div
-            className="bg-gradient-to-br from-white/90 to-blue-50/90 backdrop-blur-sm rounded-3xl p-12 border border-white/20 shadow-xl"
+            className="bg-gradient-to-br from-white to-blue-50 rounded-3xl p-12 border border-gray-100 shadow-card"
             data-aos="fade-up"
           >
             <div className="max-w-4xl mx-auto text-center">
@@ -203,7 +203,7 @@ const CompanyInfo = () => {
                 riešenia, ktoré prinášajú skutočnú hodnotu ich businessu a
                 používateľom.
               </p>
-              <div className="inline-flex items-center justify-center w-20 h-1 bg-gradient-to-r from-[#4c2844] to-purple-600 rounded-full"></div>
+              <div className="inline-flex items-center justify-center w-20 h-1 bg-gradient-to-r from-[#2968A3] to-sky-500 rounded-full"></div>
             </div>
           </div>
 
@@ -225,11 +225,11 @@ const CompanyInfo = () => {
         </div>
 
         {/* Values with gradient cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {values.map((value, index) => (
             <div
               key={index}
-              className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+              className="group relative bg-white rounded-2xl p-8 border border-gray-100 shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -255,69 +255,8 @@ const CompanyInfo = () => {
           ))}
         </div>
 
-        {/* Process with modern design */}
-        <div className="text-center">
-          <h3 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-            Náš{" "}
-            <span className="bg-gradient-to-r from-[#4c2844] to-purple-600 bg-clip-text text-transparent">
-              proces
-            </span>
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              {
-                step: "01",
-                title: "Analýza",
-                desc: "Pochopenie vašich potrieb a cieľov",
-                gradient: "from-blue-500 to-cyan-500",
-              },
-              {
-                step: "02",
-                title: "Vývoj",
-                desc: "Implementácia pomocou najnovších technológií",
-                gradient: "from-purple-500 to-violet-500",
-              },
-              {
-                step: "03",
-                title: "Podpora",
-                desc: "Kontinuálna starostlivosť a údržba",
-                gradient: "from-orange-500 to-red-500",
-              },
-            ].map((phase, index) => (
-              <div
-                key={index}
-                className="relative group"
-                data-aos="fade-up"
-                data-aos-delay={index * 150}
-              >
-                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  <div
-                    className={`w-16 h-16 bg-gradient-to-r ${phase.gradient} rounded-2xl flex items-center justify-center text-white text-xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform`}
-                  >
-                    {phase.step}
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">
-                    {phase.title}
-                  </h4>
-                  <p className="text-gray-600 leading-relaxed">{phase.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
-      <style jsx>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
-        }
-      `}</style>
     </section>
   );
 };

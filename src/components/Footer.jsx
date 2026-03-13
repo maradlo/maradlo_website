@@ -9,7 +9,7 @@ import {
   ExternalLink,
   ArrowUp,
 } from "lucide-react";
-import Logo from "../assets/logo-no-bg.png";
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -28,12 +28,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-[#4c2844] to-gray-900 text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-gray-900 via-[#2968A3] to-gray-900 text-white overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#4c2844] via-purple-400 to-pink-400"></div>
-        <div className="absolute top-10 left-20 w-64 h-64 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-20 w-80 h-80 bg-gradient-to-r from-[#4c2844]/20 to-purple-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2968A3] via-sky-400 to-teal-400"></div>
+        <div className="absolute top-10 left-20 w-64 h-64 bg-gradient-to-r from-sky-400/10 to-teal-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-20 w-80 h-80 bg-gradient-to-r from-[#2968A3]/20 to-sky-400/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -44,7 +44,7 @@ const Footer = () => {
             <div className="lg:col-span-2 space-y-6">
               <div className="max-w-md">
                 <h3 className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-4">
-                  Maradlo s.r.o.
+                  Maradlo
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
                   Špecializujeme sa na vývoj profesionálnych softvérových
@@ -75,7 +75,7 @@ const Footer = () => {
                     key={index}
                     className="group flex items-center gap-3 text-gray-300 hover:text-white transition-all duration-200"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-300/20 to-pink-300/20 flex items-center justify-center group-hover:from-purple-300/30 group-hover:to-pink-300/30 transition-all">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-sky-300/20 to-teal-300/20 flex items-center justify-center group-hover:from-sky-300/30 group-hover:to-teal-300/30 transition-all">
                       <service.icon className="w-4 h-4" />
                     </div>
                     <span className="text-sm group-hover:translate-x-1 transition-transform">
@@ -86,7 +86,7 @@ const Footer = () => {
                 <div className="pt-2">
                   <a
                     href="#why-us"
-                    className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-purple-300 transition-colors group"
+                    className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-sky-300 transition-colors group"
                   >
                     Všetky služby
                     <ExternalLink className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -103,9 +103,9 @@ const Footer = () => {
               <div className="space-y-4">
                 <a
                   href="mailto:marek.zacik@maradlo.sk"
-                  className="group flex items-center gap-3 text-gray-300 hover:text-purple-300 transition-all duration-200"
+                  className="group flex items-center gap-3 text-gray-300 hover:text-sky-300 transition-all duration-200"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-300/20 to-pink-300/20 flex items-center justify-center group-hover:from-purple-300/30 group-hover:to-pink-300/30 transition-all">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-sky-300/20 to-teal-300/20 flex items-center justify-center group-hover:from-sky-300/30 group-hover:to-teal-300/30 transition-all">
                     <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   </div>
                   <span className="text-sm group-hover:translate-x-1 transition-transform">
@@ -141,11 +141,11 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-4">
               <div className="text-sm text-gray-400">
-                © {currentYear} Maradlo s.r.o. Všetky práva vyhradené.
+                © {currentYear} Maradlo. Všetky práva vyhradené.
               </div>
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="group flex items-center gap-2 text-xs text-gray-500 hover:text-purple-300 transition-colors"
+                className="group flex items-center gap-2 text-xs text-gray-500 hover:text-sky-300 transition-colors"
               >
                 <ArrowUp className="w-3 h-3 group-hover:-translate-y-0.5 transition-transform" />
                 Späť hore

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import LogoIcon from "../assets/logo_only_no_bg.png";
-import LogoText from "../assets/logo_text_no_bg.png";
 import { Link } from "react-scroll";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
@@ -33,25 +32,23 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link
               to="top"
               spy={true}
               smooth={true}
               duration={700}
-              className="flex items-center gap-2 cursor-pointer group"
+              className="flex items-center gap-3 cursor-pointer group"
             >
               <img
                 src={LogoIcon}
                 alt="Maradlo Icon"
-                className="h-16 w-auto transition-transform group-hover:scale-105"
+                className="h-12 w-auto transition-transform duration-200 group-hover:scale-105"
               />
-              <img
-                src={LogoText}
-                alt="Maradlo"
-                className="h-12 w-auto transition-transform group-hover:scale-105"
-              />
+              <span className="text-xl font-bold text-gray-900 tracking-tight transition-colors duration-200 group-hover:text-[#2968A3]">
+                Maradlo
+              </span>
             </Link>
           </div>
 
