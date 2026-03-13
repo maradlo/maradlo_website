@@ -296,6 +296,15 @@ const MyApps = () => {
                 {/* App Store button */}
                 <div className="flex flex-wrap items-center gap-4">
                   <AppStoreBadge href={featuredApp.appStoreUrl} />
+                  <a
+                    href="https://flexor.sk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2.5 bg-gradient-to-r from-orange-500 to-rose-500 text-white rounded-xl px-5 py-3 hover:from-orange-600 hover:to-rose-600 transition-all duration-200 hover:scale-105 shadow-lg font-semibold"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                    <span>Flexor.sk</span>
+                  </a>
                   <div className="flex items-center gap-2 text-gray-400 text-sm">
                     <Sparkles className="w-4 h-4 text-orange-400" />
                     <span>Poháňané AI</span>
